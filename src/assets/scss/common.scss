@@ -1,0 +1,11 @@
+body {
+  @apply font-poppins bg-black text-white;
+}
+
+.icon {
+  @apply cursor-pointer;
+}
+
+.router-link-active.router-link-exact-active {
+  @apply border-b-2 border-grey md:border-gray-300;
+}
