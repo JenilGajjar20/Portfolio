@@ -1,7 +1,7 @@
 .navbar {
-  @apply relative transition-all duration-200;
+  @apply relative transition-all duration-200 container;
   &-wrapper {
-    @apply border-b-2 border-white text-white py-5 px-4 md:px-14;
+    @apply border-b-2 border-white text-white py-5;
     &--content {
       @apply flex justify-between;
     }
@@ -28,7 +28,7 @@
 }
 
 .list-items {
-  @apply absolute top-0 right-0 h-screen w-4/5 bg-white shadow-lg md:hidden;
+  @apply fixed top-0 right-0 h-screen w-4/5 bg-white shadow-lg md:hidden;
   .close-icon {
     @apply absolute -left-14 top-5 rounded-full flex items-center justify-center w-8 h-8 bg-white text-grey;
   }
