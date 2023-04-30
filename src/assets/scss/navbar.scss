@@ -28,8 +28,9 @@
 }
 
 .list-items {
-  @apply fixed top-0 right-0 h-screen w-4/5 bg-white shadow-lg md:hidden;
+  @apply fixed z-10 top-0 right-0 h-screen w-4/5 bg-white shadow-lg md:hidden;
   .close-icon {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     @apply absolute -left-14 top-5 rounded-full flex items-center justify-center w-8 h-8 bg-white text-grey;
   }
   ul {

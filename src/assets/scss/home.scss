@@ -25,11 +25,11 @@
 // About Section CSS
 .about {
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
-  @apply bg-white rounded-lg my-10 md:mb-24 text-black py-10 px-8;
+  @apply bg-white rounded-lg mb-10 md:mb-24 py-10 px-8;
   &-content {
     @apply space-y-8;
     h2 {
-      @apply text-2xl md:text-4xl font-bold;
+      @apply text-2xl md:text-4xl font-bold text-black;
       span {
         @apply relative text-gray-500 inline-block;
         // &:after {
@@ -38,7 +38,23 @@
       }
     }
     p {
-      @apply text-xl;
+      @apply text-xl text-gray-500;
     }
+  }
+}
+
+// Projects Section CSS
+.projects {
+  @apply pb-10 md:pb-24;
+  &--lists {
+    @apply pt-10 space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-5;
+  }
+}
+
+// Articles Section CSS
+.articles {
+  @apply pb-10 md:pb-24;
+  &--lists {
+    @apply pt-10 space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-5;
   }
 }

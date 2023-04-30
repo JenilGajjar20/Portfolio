@@ -8,10 +8,7 @@
         <router-link to="/about" class="nav-link">About</router-link>
       </li>
       <li>
-        <router-link to="/contact" class="nav-link">Contact</router-link>
-      </li>
-      <li>
-        <router-link to="/work" class="nav-link">Work</router-link>
+        <router-link to="/work" class="nav-link">Projects</router-link>
       </li>
       <li>
         <router-link to="/articles" class="nav-link">Articles</router-link>
