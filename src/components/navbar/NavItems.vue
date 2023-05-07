@@ -1,22 +1,23 @@
 <template>
   <div class="navbar-items">
-    <ul>
-      <li>
-        <router-link to="/" class="nav-link">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/about" class="nav-link">About</router-link>
-      </li>
-      <li>
-        <router-link to="/work" class="nav-link">Projects</router-link>
-      </li>
-      <li>
-        <router-link to="/articles" class="nav-link">Articles</router-link>
-      </li>
-    </ul>
+    <p class="hidden md:block">Connect with me on:</p>
+    <div class="flex items-center gap-2 text-xl">
+      <a href="https://twitter.com/gajjar_jenil" target="_blank">
+        <IconsMdiTwitter class="text-gray-300 hover:text-white" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jenil-gajjar-27934920a/"
+        target="_blank"
+      >
+        <IconsMdiLinkedIn class="text-gray-300 hover:text-white" />
+      </a>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import IconsMdiTwitter from "@/components/icons/MdiTwitter.vue";
+import IconsMdiLinkedIn from "@/components/icons/MdiLinkedIn.vue";
+</script>
 
 <style lang="scss" scoped></style>

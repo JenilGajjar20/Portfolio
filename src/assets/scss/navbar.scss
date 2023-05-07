@@ -3,24 +3,21 @@
   &-wrapper {
     @apply border-b-2 border-white text-white py-5;
     &--content {
-      @apply flex justify-between;
+      @apply flex items-center justify-between;
     }
+  }
+  &-content__logo {
+    @apply text-xl md:text-4xl;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   &-content__menu {
     @apply md:hidden;
   }
   &-content__items {
-    @apply hidden md:block;
+    // @apply hidden md:block;
   }
   &-items {
-    ul {
-      @apply flex items-center space-x-6;
-      .nav-link {
-        &:hover {
-          @apply text-gray-300;
-        }
-      }
-    }
+    @apply flex items-center gap-3;
   }
   &-menu-icon {
     @apply text-2xl;
