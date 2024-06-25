@@ -4,7 +4,9 @@
       <div class="projects-content">
         <div class="content-header">
           <h2>Projects</h2>
-          <a :href="github_link" target="_blank">Open GitHub</a>
+          <a href="https://github.com/JenilGajjar20/" target="_blank"
+            >Open GitHub</a
+          >
         </div>
         <div class="projects--lists">
           <!-- Cards -->
@@ -17,21 +19,15 @@
 
 <script setup>
 import Card from "@/components/Card.vue";
+import projectData from "@/data/projects/data.json";
 
-import axios from "axios";
+// import axios from "axios";
 import { onMounted, ref } from "vue";
 
 let projects = ref([]);
-let github_link = ref("");
 
 onMounted(() => {
-  axios
-    .get("https://api.github.com/users/JenilGajjar20/repos")
-    .then((res) => res.data)
-    .then((data) => {
-      console.log("data: ", data);
-      projects.value = data;
-      github_link.value = data.owner?.html_url;
-    });
+  console.log("data: ", projectData);
+  projects.value = projectData;
 });
 </script>

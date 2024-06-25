@@ -23,20 +23,20 @@
 
 <script setup>
 import Card from "@/components/Card.vue";
-import axios from "axios";
+// import axios from "axios";
 import { onMounted, ref } from "vue";
 
 let articles = ref([]);
 let article_link = ref("");
 
-onMounted(() => {
-  axios
-    .get(
-      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jenilgajjar"
-    )
-    .then((res) => {
-      articles.value = res.data.items;
-      article_link.value = res.data.feed.link;
-    });
-});
+// onMounted(() => {
+//   axios
+//     .get(
+//       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jenilgajjar"
+//     )
+//     .then((res) => {
+//       articles.value = res.data.items;
+//       article_link.value = res.data.feed.link;
+//     });
+// });
 </script>

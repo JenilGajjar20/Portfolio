@@ -1,25 +1,14 @@
 <template>
-  <div v-if="!item.fork && item.description != null" class="cards">
+  <div class="cards">
     <div class="cards-content">
       <!-- Article Thumbnail -->
-      <div v-if="item?.thumbnail" class="card--image">
+      <!-- <div v-if="item?.thumbnail" class="card--image">
         <img :src="item.thumbnail" :alt="item.title" />
-      </div>
-
+      </div> -->
       <div class="card--data">
         <!-- Github Project Details -->
-        <div v-if="item.owner?.login == 'JenilGajjar20'" class="card--top">
-          <p>{{ item.name }}</p>
-          <a :href="item.html_url" target="_blank">
-            <IconsMdiArrowTopRight
-              class="mt-1.5 text-xl text-gray-500 hover:text-black"
-            />
-          </a>
-        </div>
-
-        <!-- Article Details -->
-        <div v-else class="card--top">
-          <p class="pb-4">{{ item.title }}</p>
+        <div class="card--top">
+          <p>{{ item.title }}</p>
           <a :href="item.link" target="_blank">
             <IconsMdiArrowTopRight
               class="mt-1.5 text-xl text-gray-500 hover:text-black"
@@ -27,10 +16,17 @@
           </a>
         </div>
 
-        <div
-          v-if="item.description && item.owner?.login == 'JenilGajjar20'"
-          class="card--middle"
-        >
+        <!-- Article Details -->
+        <!-- <div v-else class="card--top">
+          <p class="pb-4">{{ item.title }}</p>
+          <a :href="item.link" target="_blank">
+            <IconsMdiArrowTopRight
+              class="mt-1.5 text-xl text-gray-500 hover:text-black"
+            />
+          </a>
+        </div> -->
+
+        <div v-if="item.description" class="card--middle">
           <p v-html="item.description" />
         </div>
 
@@ -42,26 +38,26 @@
               {{ topic }}
             </p>
           </div>
-          <div v-if="item.created_at" class="created-at">
+          <!-- <div v-if="item.created_at" class="created-at">
             Created At:
             <p>{{ item?.created_at }}</p>
-          </div>
+          </div> -->
         </div>
 
         <!-- Article Categories -->
-        <div v-if="item?.categories" class="card--bottom">
+        <!-- <div v-if="item?.categories" class="card--bottom">
           <div class="categories">
             Categories:
             <p v-for="(category, index) in item.categories" :key="index">
               {{ category }}
             </p>
-          </div>
-          <!-- Article Published Date -->
-          <div v-if="item.pubDate" class="pub-date">
+          </div> -->
+        <!-- Article Published Date -->
+        <!-- <div v-if="item.pubDate" class="pub-date">
             Published:
             <p>{{ item?.pubDate }}</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -107,7 +103,7 @@ defineProps(["item"]);
     p {
       @apply text-gray-500;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }

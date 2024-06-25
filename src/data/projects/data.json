@@ -1,23 +1,27 @@
 [
     {
+        "id": "1",
+        "title": "LinuxAdminToolkit",
+        "description": "This repository is a comprehensive collection of essential Linux commands, networking configurations, services management, monitoring tools, logging practices, and shell scripting examples.",
+        "topics": ["linux", "networking", "monitoring", "logging", "commands", "shell-scripting", "configuration-files"],
+        "link": "https://github.com/JenilGajjar20/LinuxAdminToolkit"
+    },
+    {
+        "id": "2",
+        "title": "SensorNetGuard",
+        "description": "This repository contains code related to identifying malicious sensor nodes using the SensorNetGuard Dataset. The code implements three models: Long Short-Term Memory(LSTM), Gated Recurrent Unit(GRU) and One-Dimensional Convolutional Neural Network (1D-CNN).",
+        "topics": ["deep-learning", "lstm", "gru", "1d-cnn"],
+        "link": "https://github.com/JenilGajjar20/SensorNetGuard"
+    },
+    {
+        "id": "3",
         "title": "",
         "description": "",
         "topics": [""],
         "link": ""
     },
     {
-        "title": "",
-        "description": "",
-        "topics": [""],
-        "link": ""
-    },
-    {
-        "title": "",
-        "description": "",
-        "topics": [""],
-        "link": ""
-    },
-    {
+        "id": "4",
         "title": "",
         "description": "",
         "topics": [""],
