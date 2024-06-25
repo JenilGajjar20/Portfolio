@@ -4,7 +4,7 @@
       <div class="projects-content">
         <div class="content-header">
           <h2>Projects</h2>
-          <a :href="github_link" target="_blank">View Profile</a>
+          <a :href="github_link" target="_blank">Open GitHub</a>
         </div>
         <div class="projects--lists">
           <!-- Cards -->
@@ -26,12 +26,12 @@ let github_link = ref("");
 
 onMounted(() => {
   axios
-    .get("https://api.github.com/users/JenilGajjar20/repos?page=2")
+    .get("https://api.github.com/users/JenilGajjar20/repos")
     .then((res) => res.data)
     .then((data) => {
       console.log("data: ", data);
       projects.value = data;
-      github_link.value = data[0].owner?.html_url;
+      github_link.value = data.owner?.html_url;
     });
 });
 </script>

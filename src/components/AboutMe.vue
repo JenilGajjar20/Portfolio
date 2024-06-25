@@ -4,9 +4,14 @@
       <div class="about-content">
         <h2>About <span>Me</span></h2>
         <p>
-          Hey, I am currently working as a Frontend Developer 👨‍💻 in Vue.js.
-          Always eager to learn
-          <strong>new</strong> technologies.
+          As a passionate tech enthusiast, I thrive on continuous learning and
+          enthusiastically embrace new technologies. My adaptable mindset and
+          self-driven approach enable me to excel in dynamic work environments.
+          I actively contribute to open-source projects, embodying a commitment
+          to collaborative learning and innovation. Eager to delve into new
+          technologies, I bring a blend of curiosity, dedication, and a strong
+          desire to make meaningful contributions in the ever-evolving tech
+          landscape.
         </p>
       </div>
     </div>

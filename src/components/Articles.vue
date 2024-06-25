@@ -6,7 +6,7 @@
           <h2>
             Articles <span>({{ articles.length }})</span>
           </h2>
-          <a :href="article_link" target="_blank">View Profile</a>
+          <a :href="article_link" target="_blank">Go To Medium</a>
         </div>
         <div class="articles--lists">
           <!-- Articles Cards -->
