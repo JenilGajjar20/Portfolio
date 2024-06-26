@@ -15,16 +15,16 @@
     },
     {
         "id": "3",
-        "title": "",
+        "title": "PyCyberSecurity",
         "description": "",
-        "topics": [""],
-        "link": ""
+        "topics": ["python", "cybersecurity"],
+        "link": "https://github.com/JenilGajjar20/PyCyberSecurity"
     },
     {
         "id": "4",
-        "title": "",
-        "description": "",
-        "topics": [""],
-        "link": ""
+        "title": "SensorNetGuard",
+        "description": "This repository contains code related to identifying malicious sensor nodes using the SensorNetGuard Dataset. The code implements three models: Long Short-Term Memory(LSTM), Gated Recurrent Unit(GRU) and One-Dimensional Convolutional Neural Network (1D-CNN).",
+        "topics": ["deep-learning", "lstm", "gru", "1d-cnn"],
+        "link": "https://github.com/JenilGajjar20/SensorNetGuard"
     }
 ]

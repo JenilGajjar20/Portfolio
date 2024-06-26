@@ -76,6 +76,7 @@ defineProps(["item"]);
 
 <style lang="scss">
 .cards {
+  @apply mb-8;
   &-content {
     @apply relative;
   }
