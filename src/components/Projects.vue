@@ -4,9 +4,9 @@
       <div class="projects-content">
         <div class="content-header">
           <h2>Projects</h2>
-          <a href="https://github.com/JenilGajjar20/" target="_blank"
-            >Open GitHub</a
-          >
+          <a href="https://github.com/JenilGajjar20/" target="_blank">
+            Open GitHub
+          </a>
         </div>
         <div class="projects--lists">
           <!-- Cards -->
@@ -21,7 +21,6 @@
 import Card from "@/components/Card.vue";
 import projectData from "@/data/projects/data.json";
 
-// import axios from "axios";
 import { onMounted, ref } from "vue";
 
 let projects = ref([]);

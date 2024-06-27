@@ -1,0 +1,40 @@
+[
+    {
+        "id": "education_1",
+        "institute": "Shree Narayana Guru Vidhyalaya",
+        "qualification": "SSC",
+        "percentage": "66",
+        "from": "2004",
+        "to": "2016",
+        "place": "ahmedabad"
+    },
+    {
+        "id": "education_2",
+        "institute": "Kameshwar Vidhyamandir",
+        "qualification": "HSC",
+        "percentage": "68",
+        "from": "2016",
+        "to": "2018",
+        "place": "ahmedabad"
+    },
+    {
+        "id": "education_3",
+        "institute": "L. J. Institute of Engineering and Technology",
+        "qualification": "B. E. in Computer Engineering",
+        "content": ["Developed a noteworthy project named StickWithIt during my engineering journey. The project developed was an Online Food Ordering Website using Nuxt.js and Firebase."],
+        "cgpa": "8.04",
+        "from": "2004",
+        "to": "2016",
+        "place": "ahmedabad"
+    },
+    {
+        "id": "education_4",
+        "institute": "Nirma University",
+        "qualification": "M.tech in Cyber Security",
+        "content": ["Pursuing a Master of Technology in Cyber Security, focusing on advanced topics such as cryptography, network security, and ethical hacking."],
+        "cgpa": "6.38",
+        "from": "2023",
+        "to": "present",
+        "place": "ahmedabad"
+    }
+]

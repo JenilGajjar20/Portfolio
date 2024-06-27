@@ -6,6 +6,8 @@
     <!-- About Section -->
     <!-- <AboutMe /> -->
 
+    <Education />
+
     <Skills />
 
     <!-- Projects Section -->
@@ -19,6 +21,7 @@
 <script setup>
 import Hero from "@/components/Hero.vue";
 import AboutMe from "@/components/AboutMe.vue";
+import Education from "@/components/Education.vue";
 import Skills from "@/components/Skills.vue";
 import Projects from "@/components/Projects.vue";
 import Articles from "@/components/Articles.vue";
