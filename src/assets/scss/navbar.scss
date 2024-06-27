@@ -7,8 +7,9 @@
     }
   }
   &-content__logo {
-    @apply text-xl md:text-4xl;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    img{
+      @apply h-14 w-14 md:h-20 md:w-20 rounded-full; 
+    }
   }
   &-content__menu {
     @apply md:hidden;

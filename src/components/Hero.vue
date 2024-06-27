@@ -2,20 +2,23 @@
   <div class="container">
     <div class="hero-section">
       <div class="hero-section--content">
-        <div class="hero-section--content-left">
-          <img src="@/assets/images/jenil.jpg" alt="jenil-gajjar" />
-        </div>
         <div class="hero-section--content-right">
           <div class="right-section--content">
             <h1>Hi, I am <span>Jenil Gajjar</span></h1>
             <p>
-              Frontend Developer 👨‍💻 | Vue.js 💚 | Tailwind CSS 💙 | Open Source
-              ❤ | Self-Learner 💪
+              As a passionate tech enthusiast, I thrive on continuous learning
+              and enthusiastically embrace new technologies. My adaptable
+              mindset and self-driven approach enable me to excel in dynamic
+              work environments. I actively contribute to open-source projects,
+              embodying a commitment to collaborative learning and innovation.
+              Eager to delve into new technologies, I bring a blend of
+              curiosity, dedication, and a strong desire to make meaningful
+              contributions in the ever-evolving tech landscape.
             </p>
           </div>
 
           <!-- Social Links -->
-          <SocialLinks class-name="hero" />
+          <!-- <SocialLinks class-name="hero" /> -->
 
           <!-- Primary Resume Button -->
           <!-- icon="IconsRocket" -->

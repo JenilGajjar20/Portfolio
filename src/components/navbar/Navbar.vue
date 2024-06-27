@@ -2,7 +2,8 @@
   <div class="navbar-wrapper">
     <div class="navbar-wrapper--content">
       <div class="navbar-content__logo">
-        <a href="/">Jenil Gajjar</a>
+        <!-- <a href="/">Jenil Gajjar</a> -->
+        <img src="@/assets/images/jenil.jpg" alt="jenil-gajjar" />
       </div>
 
       <!-- Mobile Navbar -->

@@ -33,10 +33,10 @@
         <!-- Project Topics -->
         <div class="card--bottom">
           <div v-if="item.topics?.length" class="topics">
-            Topics:
-            <p v-for="(topic, index) in item.topics" :key="index" class="">
+            <p>Topics:</p>
+            <span v-for="(topic, index) in item.topics" :key="index" class="">
               {{ topic }}
-            </p>
+            </span>
           </div>
           <!-- <div v-if="item.created_at" class="created-at">
             Created At:
@@ -47,10 +47,10 @@
         <!-- Article Categories -->
         <!-- <div v-if="item?.categories" class="card--bottom">
           <div class="categories">
-            Categories:
-            <p v-for="(category, index) in item.categories" :key="index">
+            <p>Categories:</p>
+            <span v-for="(category, index) in item.categories" :key="index">
               {{ category }}
-            </p>
+            </span>
           </div> -->
         <!-- Article Published Date -->
         <!-- <div v-if="item.pubDate" class="pub-date">
@@ -76,7 +76,7 @@ defineProps(["item"]);
 
 <style lang="scss">
 .cards {
-  @apply mb-8;
+  @apply mb-8 md:break-inside-avoid;
   &-content {
     @apply relative;
   }
@@ -110,13 +110,16 @@ defineProps(["item"]);
     }
   }
   &--bottom {
-    @apply text-gray-700 text-xs flex items-center gap-2 flex-wrap;
-    p {
-      @apply border border-gray-500 rounded px-2 py-1;
+    @apply text-gray-700 flex items-center gap-2 flex-wrap;
+    span {
+      @apply border border-gray-500 rounded px-2 py-1 text-xs;
     }
     .topics,
     .categories {
       @apply flex items-center gap-2 flex-wrap;
+      p {
+        @apply font-bold text-sm;
+      }
     }
     .created-at,
     .pub-date {
