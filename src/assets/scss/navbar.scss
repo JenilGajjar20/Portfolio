@@ -1,7 +1,7 @@
 .navbar {
   @apply relative transition-all duration-200 container;
   &-wrapper {
-    @apply border-b-2 border-white text-white py-5;
+    @apply border-b-2 border-gray-500 text-white py-5;
     &--content {
       @apply flex items-center justify-between;
     }

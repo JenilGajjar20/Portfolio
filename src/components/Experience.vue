@@ -49,7 +49,7 @@ onMounted(() => {
 
 .cards-content {
   .card {
-    @apply py-5;
+    @apply pt-5;
     &-top {
       @apply lg:flex lg:items-center lg:justify-between;
       h4 {
