@@ -8,6 +8,8 @@
 
     <Education />
 
+    <Experience />
+
     <Skills />
 
     <!-- Projects Section -->
@@ -25,4 +27,5 @@ import Education from "@/components/Education.vue";
 import Skills from "@/components/Skills.vue";
 import Projects from "@/components/Projects.vue";
 import Articles from "@/components/Articles.vue";
+import Experience from "@/components/Experience.vue";
 </script>
