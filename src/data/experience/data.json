@@ -1,0 +1,30 @@
+[
+  {
+    "id": "exp_1",
+    "role": "Frontend Developer",
+    "company_name": "7Span Internet Private Limited",
+    "description": [
+      "Utilized Tailwind CSS to create visually appealing and responsive web pages that met client requirements.",
+      "Coded using JavaScript(Vue.js) to develop features for both mobile and desktop platforms.",
+      "Worked closely with UX/UI designers to translate their designs into functional web applications.",
+      "Utilized version control systems such as Git to track changes throughout the development process.",
+      "Collaborated with back-end developers to improve website functionality and integrate new features."
+    ],
+    "start_date": "June 2022",
+    "end_date": "July 2023",
+    "location": "Ahmedabad"
+  },
+  {
+    "id": "exp_2",
+    "role": "Frontend Intern",
+    "company_name": "7Span Internet Private Limited",
+    "description": [
+      "Collaborated with the design team to produce visually consistent and cohesive content across platforms.",
+      "Utilized front-end CSS frameworks such as Tailwind for faster development of responsive designs.",
+      "Implemented SEO best practices within website structure, improving search engine rankings for target keywords"
+    ],
+    "start_date": "Jan 2022",
+    "end_date": "Apr 2022",
+    "location": "Ahmedabad"
+  }
+]
