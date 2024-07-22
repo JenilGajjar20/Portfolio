@@ -11,9 +11,11 @@
               mindset and self-driven approach enable me to excel in dynamic
               work environments. I actively contribute to open-source projects,
               embodying a commitment to collaborative learning and innovation.
-              Eager to delve into new technologies, I bring a blend of
-              curiosity, dedication, and a strong desire to make meaningful
-              contributions in the ever-evolving tech landscape.
+              Eager to delve into new security technologies and methodologies, I
+              bring a blend of curiosity, dedication, and a strong desire to
+              make meaningful contributions to the ever-evolving tech landscape,
+              with a specific focus on enhancing security and protecting digital
+              assets.
             </p>
           </div>
 
