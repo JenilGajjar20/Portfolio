@@ -1,0 +1,74 @@
+[
+  {
+    "category": [
+      {
+        "id": "sc_1",
+        "cat": "Technical",
+        "skills": [
+          {
+            "id": "t_1",
+            "label": "HTML",
+            "value": "HTML"
+          },
+          {
+            "id": "t_2",
+            "label": "CSS",
+            "value": "CSS"
+          },
+          {
+            "id": "t_3",
+            "label": "JavaScript",
+            "value": "JavaScript"
+          },
+          {
+            "id": "t_4",
+            "label": "Python",
+            "value": "Python"
+          }
+        ]
+      },
+      {
+        "id": "sc_2",
+        "cat": "Frameworks",
+        "skills": [
+          {
+            "id": "f_1",
+            "label": "Vue.js",
+            "value": "Vue.js"
+          },
+          {
+            "id": "f_2",
+            "label": "Nuxt.js",
+            "value": "Nuxt.js"
+          },
+          {
+            "id": "f_3",
+            "label": "Tailwind CSS",
+            "value": "Tailwind CSS"
+          }
+        ]
+      },
+      {
+        "id": "sc_2",
+        "cat": "Tools",
+        "skills": [
+          {
+            "id": "ts_1",
+            "label": "Kali Linux",
+            "value": "Kali Linux"
+          },
+          {
+            "id": "ts_2",
+            "label": "BurpSuite",
+            "value": "BurpSuite"
+          },
+          {
+            "id": "ts_3",
+            "label": "WireShark",
+            "value": "WireShark"
+          }
+        ]
+      }
+    ]
+  }
+]

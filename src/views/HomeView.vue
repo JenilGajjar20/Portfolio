@@ -1,11 +1,9 @@
 <template>
   <main class="module">
-    <!-- Hero Section -->
     <Hero />
 
     <HLine />
 
-    <!-- About Section -->
     <!-- <AboutMe /> -->
 
     <Education />
@@ -18,13 +16,12 @@
 
     <Skills />
 
-    <!-- <HLine /> -->
-    <!-- Projects Section -->
-    <Projects />
-
     <HLine />
 
-    <!-- Articles Section -->
+    <Projects />
+
+    <!-- <HLine /> -->
+
     <!-- <Articles /> -->
   </main>
 </template>
