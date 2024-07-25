@@ -24,6 +24,10 @@
 
     <HLine />
 
+    <Certifications />
+
+    <HLine />
+
     <!-- Articles Section -->
     <!-- <Articles /> -->
   </main>
@@ -38,4 +42,5 @@ import Projects from "@/components/Projects.vue";
 // import Articles from "@/components/Articles.vue";
 import Experience from "@/components/Experience.vue";
 import HLine from "@/components/HLine.vue";
+import Certifications from "@/components/Certifications.vue";
 </script>
