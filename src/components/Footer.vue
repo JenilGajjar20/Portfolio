@@ -1,48 +1,42 @@
 <template>
-  <div class="container pt-10 md:pt-24">
+  <div class="container py-10 md:py-24">
     <div class="footer-section">
-      <p>Follow me:</p>
-      <div class="">
-        <div v-for="link in links" :key="link.id">
-          <a :href="link.path" target="_blank">{{ link.label }}</a>
+      <div class="border border-gray-500">
+        <div
+          class="content-[''] absolute bg-black px-2 top-3 left-0 right-0 w-fit mx-auto"
+        >
+          <div class="flex items-center gap-3 text-xl md:text-2xl md:gap-4">
+            <a href="https://github.com/JenilGajjar20" target="_blank">
+              <IconsMdiGitHub class="text-gray-400 hover:text-white" />
+            </a>
+            <a href="https://jenilgajjar.medium.com/" target="_blank">
+              <IconsMdiMedium class="text-gray-400 hover:text-white" />
+            </a>
+            <a href="https://jenilgajjar.hashnode.dev/" target="_blank">
+              <IconsMdiHashnode class="text-gray-400 hover:text-white" />
+            </a>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="fonts text-center pt-5 text-xl font-bold md:pt-10 md:text-2xl">
+      <p>"Thanks for Scrolling!"</p>
     </div>
   </div>
 </template>
 
 <script setup>
-const links = [
-  {
-    id: "1",
-    label: "LinkedIn",
-    path: "",
-  },
-  {
-    id: "2",
-    label: "Twitter",
-    path: "",
-  },
-  {
-    id: "3",
-    label: "GitHub",
-    path: "",
-  },
-  {
-    id: "4",
-    label: "Medium",
-    path: "",
-  },
-  {
-    id: "5",
-    label: "Hashnode",
-    path: "",
-  },
-];
+import IconsMdiGitHub from "@/components/icons/MdiGitHub.vue";
+import IconsMdiMedium from "@/components/icons/MdiMedium.vue";
+import IconsMdiHashnode from "@/components/icons/MdiHashnode.vue";
 </script>
 
 <style lang="scss">
 .footer-section {
-  @apply bg-gray-600 rounded p-5;
+  @apply p-5 relative;
+}
+
+.fonts {
+  font-family: "Courier New", Courier, monospace;
 }
 </style>
