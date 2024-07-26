@@ -26,10 +26,12 @@
 
     <Certifications />
 
-    <HLine />
+    <!-- <HLine /> -->
 
     <!-- Articles Section -->
     <!-- <Articles /> -->
+
+    <Footer />
   </main>
 </template>
 
@@ -43,4 +45,5 @@ import Projects from "@/components/Projects.vue";
 import Experience from "@/components/Experience.vue";
 import HLine from "@/components/HLine.vue";
 import Certifications from "@/components/Certifications.vue";
+import Footer from "@/components/Footer.vue";
 </script>
