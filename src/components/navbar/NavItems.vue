@@ -3,13 +3,13 @@
     <p class="hidden md:block">Connect with me on:</p>
     <div class="flex items-center gap-2 text-xl">
       <a href="https://twitter.com/gajjar_jenil" target="_blank">
-        <IconsMdiTwitter class="text-gray-300 hover:text-white" />
+        <IconsMdiTwitter class="text-gray-400 hover:text-white" />
       </a>
       <a
         href="https://www.linkedin.com/in/jenil-gajjar-27934920a/"
         target="_blank"
       >
-        <IconsMdiLinkedIn class="text-gray-300 hover:text-white" />
+        <IconsMdiLinkedIn class="text-gray-400 hover:text-white" />
       </a>
     </div>
   </div>
