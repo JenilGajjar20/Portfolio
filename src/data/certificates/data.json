@@ -1,7 +1,7 @@
 [
   {
     "id": "certi_1",
-    "title": " Tools of the trade: Linux and SQL",
+    "title": "Tools of the trade: Linux and SQL",
     "platform": "Coursera",
     "month": "Jan",
     "year": "2024",
@@ -12,35 +12,32 @@
   },
   {
     "id": "certi_2",
-    "title": " Tools of the trade: Linux and SQL",
+    "title": "Connect and Protect: Networks and Network Security",
     "platform": "Coursera",
     "month": "Jan",
     "year": "2024",
     "description": [
-      "Gained proficiency in navigating and managing file systems using Linux Commands in the Bash Shell.",
-      "Developed skills in using both Graphical User Interfaces (GUI) and Command line interfaces (CLI)."
+      "Acquired knowledge about various types of networks and components of networks."
     ]
   },
   {
     "id": "certi_3",
-    "title": " Tools of the trade: Linux and SQL",
+    "title": "Play it Safe: Manage Security Risk",
     "platform": "Coursera",
-    "month": "Jan",
-    "year": "2024",
+    "month": "Dec",
+    "year": "2023",
     "description": [
-      "Gained proficiency in navigating and managing file systems using Linux Commands in the Bash Shell.",
-      "Developed skills in using both Graphical User Interfaces (GUI) and Command line interfaces (CLI)."
+      "Learned about threats, risks and vulnerabilities, and attained knowledge about SIEM tools."
     ]
   },
   {
     "id": "certi_4",
-    "title": " Tools of the trade: Linux and SQL",
+    "title": "Foundation of Cybersecurity",
     "platform": "Coursera",
-    "month": "Jan",
-    "year": "2024",
+    "month": "Dec",
+    "year": "2023",
     "description": [
-      "Gained proficiency in navigating and managing file systems using Linux Commands in the Bash Shell.",
-      "Developed skills in using both Graphical User Interfaces (GUI) and Command line interfaces (CLI)."
+      "Recognized core skills and gained knowledge that is needed to become a cybersecurity analyst."
     ]
   }
 ]
