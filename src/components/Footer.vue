@@ -33,7 +33,7 @@ import IconsMdiHashnode from "@/components/icons/MdiHashnode.vue";
 
 <style lang="scss">
 .footer-section {
-  @apply p-5 relative;
+  @apply py-5 relative;
 }
 
 .fonts {
