@@ -1,12 +1,7 @@
 <template>
   <div class="cards">
     <div class="cards-content">
-      <!-- Article Thumbnail -->
-      <!-- <div v-if="item?.thumbnail" class="card--image">
-        <img :src="item.thumbnail" :alt="item.title" />
-      </div> -->
       <div class="card--data">
-        <!-- Github Project Details -->
         <div class="card--top">
           <p>{{ item.title }}</p>
           <a :href="item.link" target="_blank">
@@ -16,21 +11,10 @@
           </a>
         </div>
 
-        <!-- Article Details -->
-        <!-- <div v-else class="card--top">
-          <p class="pb-4">{{ item.title }}</p>
-          <a :href="item.link" target="_blank">
-            <IconsMdiArrowTopRight
-              class="mt-1.5 text-xl text-gray-500 hover:text-black"
-            />
-          </a>
-        </div> -->
-
         <div v-if="item.description" class="card--middle">
           <p v-html="item.description" />
         </div>
 
-        <!-- Project Topics -->
         <div class="card--bottom">
           <div v-if="item.topics?.length" class="topics">
             <p>Topics:</p>
@@ -38,26 +22,7 @@
               {{ topic }}
             </span>
           </div>
-          <!-- <div v-if="item.created_at" class="created-at">
-            Created At:
-            <p>{{ item?.created_at }}</p>
-          </div> -->
         </div>
-
-        <!-- Article Categories -->
-        <!-- <div v-if="item?.categories" class="card--bottom">
-          <div class="categories">
-            <p>Categories:</p>
-            <span v-for="(category, index) in item.categories" :key="index">
-              {{ category }}
-            </span>
-          </div> -->
-        <!-- Article Published Date -->
-        <!-- <div v-if="item.pubDate" class="pub-date">
-            Published:
-            <p>{{ item?.pubDate }}</p>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -65,13 +30,8 @@
 
 <script setup>
 import IconsMdiArrowTopRight from "@/components/icons/MdiArrowTopRight.vue";
-// import { computed } from "vue";
 
 defineProps(["item"]);
-
-// const publishedDate = computed(() => {
-//   return item?.pubDate;
-// });
 </script>
 
 <style lang="scss">
