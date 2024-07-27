@@ -56,7 +56,6 @@ import { onMounted, ref } from "vue";
 let educationDetails = ref([]);
 
 onMounted(() => {
-  console.log("eduData: ", eduData);
   educationDetails.value = eduData;
 });
 </script>

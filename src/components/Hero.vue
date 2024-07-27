@@ -19,11 +19,7 @@
             </p>
           </div>
 
-          <!-- Social Links -->
-          <!-- <SocialLinks class-name="hero" /> -->
-
           <!-- Primary Resume Button -->
-          <!-- icon="IconsRocket" -->
           <ButtonDefault
             text="Resume"
             class="button--outline"
@@ -36,7 +32,6 @@
 </template>
 
 <script setup>
-// import SocialLinks from "@/components/SocialLinks.vue";
 import ButtonDefault from "@/components/button/Default.vue";
 import { ref } from "vue";
 

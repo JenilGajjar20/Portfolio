@@ -3,7 +3,7 @@
     <div class="footer-section">
       <div class="border border-gray-500">
         <div
-          class="content-[''] absolute bg-black px-2 top-3 left-0 right-0 w-fit mx-auto"
+          class="content-[''] absolute bg-black px-4 top-3 left-0 right-0 w-fit mx-auto"
         >
           <div class="flex items-center gap-3 text-xl md:text-2xl md:gap-4">
             <a href="https://github.com/JenilGajjar20" target="_blank">

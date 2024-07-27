@@ -26,7 +26,6 @@ import { onMounted, ref } from "vue";
 let projects = ref([]);
 
 onMounted(() => {
-  console.log("data: ", projectData);
   projects.value = projectData;
 });
 </script>

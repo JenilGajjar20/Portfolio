@@ -5,9 +5,6 @@
 
     <HLine />
 
-    <!-- About Section -->
-    <!-- <AboutMe /> -->
-
     <Education />
 
     <HLine />
@@ -37,7 +34,6 @@
 
 <script setup>
 import Hero from "@/components/Hero.vue";
-// import AboutMe from "@/components/AboutMe.vue";
 import Education from "@/components/Education.vue";
 import Skills from "@/components/Skills.vue";
 import Projects from "@/components/Projects.vue";
