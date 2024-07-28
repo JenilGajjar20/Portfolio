@@ -1,6 +1,5 @@
 <template>
   <main class="module">
-    <!-- Hero Section -->
     <Hero />
 
     <HLine />
@@ -15,8 +14,8 @@
 
     <Skills />
 
-    <!-- <HLine /> -->
-    <!-- Projects Section -->
+    <HLine />
+
     <Projects />
 
     <HLine />
@@ -25,7 +24,6 @@
 
     <!-- <HLine /> -->
 
-    <!-- Articles Section -->
     <!-- <Articles /> -->
 
     <Footer />
