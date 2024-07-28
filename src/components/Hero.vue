@@ -19,12 +19,12 @@
             </p>
           </div>
 
-          <!-- Social Links -->
-          <!-- <SocialLinks class-name="hero" /> -->
-
           <!-- Primary Resume Button -->
-          <!-- icon="IconsRocket" -->
-          <ButtonDefault text="Resume" class="button--outline" />
+          <ButtonDefault
+            text="Resume"
+            class="button--outline"
+            @click="openResume"
+          />
         </div>
       </div>
     </div>
@@ -32,6 +32,13 @@
 </template>
 
 <script setup>
-import SocialLinks from "@/components/SocialLinks.vue";
 import ButtonDefault from "@/components/button/Default.vue";
+import { ref } from "vue";
+
+const url = ref("");
+
+const openResume = () => {
+  url.value = `${import.meta.env.BASE_URL}jenilgajjar_resume.pdf`;
+  window.open(url.value, "_blank");
+};
 </script>
