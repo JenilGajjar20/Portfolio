@@ -1,5 +1,5 @@
 <template>
-  <main class="module">
+  <main class="container">
     <Hero />
 
     <HLine />
@@ -25,8 +25,6 @@
     <!-- <HLine /> -->
 
     <!-- <Articles /> -->
-
-    <Footer />
   </main>
 </template>
 

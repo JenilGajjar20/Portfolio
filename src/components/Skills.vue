@@ -1,61 +1,53 @@
 <template>
-  <div class="container">
-    <div class="skills">
-      <div class="skills-content">
-        <div class="content-header">
-          <h2>Skills</h2>
-        </div>
-        <div class="skills-content__data">
-          <div class="skill-data">
-            <div
-              class="grid grid-cols-3 gap-7 md:grid-cols-4 md:gap-10 lg:gap-14"
-            >
-              <div class="text-center">
-                <IconsHtml class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">HTML</p>
-              </div>
-              <div class="text-center">
-                <IconsCSS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">CSS</p>
-              </div>
-              <div class="text-center">
-                <IconsTailwind class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">Tailwind CSS</p>
-              </div>
-              <div class="text-center">
-                <IconsJS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">JavaScript</p>
-              </div>
-              <div class="text-center">
-                <IconsVue class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">Vue.js</p>
-              </div>
-              <div class="text-center">
-                <IconsNuxt class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">Nuxt.js</p>
-              </div>
-              <div class="text-center">
-                <IconsPython class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-                <p class="font-bold">Python</p>
-              </div>
-              <div class="text-center">
-                <IconsKaliLinux
-                  class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20"
-                />
-                <p class="font-bold">Kali Linux</p>
-              </div>
-              <div class="text-center">
-                <IconsBurpSuite
-                  class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20"
-                />
-                <p class="font-bold">BurpSuite</p>
-              </div>
-              <div class="text-center">
-                <IconsWireShark
-                  class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20"
-                />
-                <p class="font-bold">Wireshark</p>
-              </div>
+  <div class="skills">
+    <div class="skills-content">
+      <div class="content-header">
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-content__data">
+        <div class="skill-data">
+          <div
+            class="grid grid-cols-3 gap-7 md:grid-cols-4 md:gap-10 lg:gap-14"
+          >
+            <div class="text-center">
+              <IconsHtml class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">HTML</p>
+            </div>
+            <div class="text-center">
+              <IconsCSS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">CSS</p>
+            </div>
+            <div class="text-center">
+              <IconsTailwind class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">Tailwind CSS</p>
+            </div>
+            <div class="text-center">
+              <IconsJS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">JavaScript</p>
+            </div>
+            <div class="text-center">
+              <IconsVue class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">Vue.js</p>
+            </div>
+            <div class="text-center">
+              <IconsNuxt class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">Nuxt.js</p>
+            </div>
+            <div class="text-center">
+              <IconsPython class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">Python</p>
+            </div>
+            <div class="text-center">
+              <IconsKaliLinux class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">Kali Linux</p>
+            </div>
+            <div class="text-center">
+              <IconsBurpSuite class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">BurpSuite</p>
+            </div>
+            <div class="text-center">
+              <IconsWireShark class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
+              <p class="font-bold">Wireshark</p>
             </div>
           </div>
         </div>

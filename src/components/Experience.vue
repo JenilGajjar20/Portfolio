@@ -1,28 +1,26 @@
 <template>
-  <div class="container">
-    <div class="experience">
-      <div class="experience-content">
-        <div class="content-header">
-          <h2>Experience</h2>
-        </div>
-        <div class="experience-cards">
-          <div class="cards-content">
-            <div class="card" v-for="exp in experienceDetails" :key="exp.id">
-              <div class="card-top">
-                <h4>
-                  {{ exp.role }}
-                  <span>
-                    {{ "- " + exp.company_name + ", " + exp.location }}
-                  </span>
-                </h4>
-                <p>{{ exp.start_date + " - " + exp.end_date }}</p>
-              </div>
-              <ul class="card-mid">
-                <li v-for="desc in exp.description" :key="desc">
-                  {{ desc }}
-                </li>
-              </ul>
+  <div class="experience">
+    <div class="experience-content">
+      <div class="content-header">
+        <h2>Experience</h2>
+      </div>
+      <div class="experience-cards">
+        <div class="cards-content">
+          <div class="card" v-for="exp in experienceDetails" :key="exp.id">
+            <div class="card-top">
+              <h4>
+                {{ exp.role }}
+                <span>
+                  {{ "- " + exp.company_name + ", " + exp.location }}
+                </span>
+              </h4>
+              <p>{{ exp.start_date + " - " + exp.end_date }}</p>
             </div>
+            <ul class="card-mid">
+              <li v-for="desc in exp.description" :key="desc">
+                {{ desc }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
