@@ -17,7 +17,7 @@ import IconsMdiArrowTopRight from "@/components/icons/MdiArrowTopRight.vue";
   &--outline {
     @apply border-2 border-white;
     &:hover {
-      @apply bg-white text-grey;
+      @apply text-bright_yellow border-bright_yellow;
     }
   }
 }
