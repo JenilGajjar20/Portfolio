@@ -7,6 +7,8 @@ module.exports = {
         white: "#ffffff",
         black: "#000000",
         grey: "#18181b",
+        charcoal: "#101820",
+        bright_yellow: "#FEE715",
       },
     },
     container: {
@@ -22,6 +24,7 @@ module.exports = {
     },
     fontFamily: {
       poppins: ["Poppins, sans-serif"],
+      oswald: ["Oswald, sans-serif"],
     },
   },
   plugins: [],
