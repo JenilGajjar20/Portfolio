@@ -7,10 +7,7 @@
       class="bg-gray-800 rounded overflow-hidden lg:flex lg:items-center lg:gap-6"
     >
       <div class="blogs-articles__img">
-        <img
-          :src="`../src/assets/images/${article.image}`"
-          :alt="article.title"
-        />
+        <img :src="`/images/${article.image}`" :alt="article.title" />
       </div>
       <div class="blogs-articles__data">
         <div
