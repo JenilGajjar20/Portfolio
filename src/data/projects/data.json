@@ -3,64 +3,50 @@
     "id": "project_1",
     "title": "LinuxAdminToolkit",
     "description": "This repository is a comprehensive collection of essential Linux commands, networking configurations, services management, monitoring tools, logging practices, and shell scripting examples.",
-    "topics": [
-      "linux",
-      "networking",
-      "monitoring",
-      "logging",
-      "commands",
-      "shell-scripting",
-      "configuration-files"
-    ],
-    "link": "https://github.com/JenilGajjar20/LinuxAdminToolkit"
+    "category": "LINUX",
+    "link": "https://github.com/JenilGajjar20/LinuxAdminToolkit",
+    "t_color": "text-red-500"
   },
   {
     "id": "project_2",
-    "title": "SensorNetGuard",
-    "description": "This repository contains code related to identifying malicious sensor nodes using the SensorNetGuard Dataset. The code implements three models: Long Short-Term Memory(LSTM), Gated Recurrent Unit(GRU) and One-Dimensional Convolutional Neural Network (1D-CNN).",
-    "topics": ["deep-learning", "lstm", "gru", "1d-cnn"],
-    "link": "https://github.com/JenilGajjar20/SensorNetGuard"
-  },
-  {
-    "id": "project_3",
     "title": "PyCyberSecurity",
     "description": "This repository contains a collection of python scripts and projects related to various cybersecurity tasks.",
-    "topics": ["python", "cybersecurity"],
+    "tech": "PYTHON",
     "link": "https://github.com/JenilGajjar20/PyCyberSecurity"
   },
   {
-    "id": "project_4",
+    "id": "project_3",
     "title": "InternetBanking",
     "description": "This project provides users with a secure and user-friendly platform to manage their bank accounts online.",
-    "topics": ["node.js", "online-banking-system", "nuxt.js", "express.js"],
+    "tech": "JAVASCRIPT",
     "link": "https://github.com/JenilGajjar20/internet-banking"
   },
   {
-    "id": "project_5",
+    "id": "project_4",
     "title": "StickWithIt",
     "description": "StickWithIt is an online food ordering website created using PHP. You can view and purchase various items as well as remove items from the cart.",
-    "topics": ["mysql", "php", "sql", "database", "xampp"],
+    "tech": "PHP",
     "link": "https://github.com/JenilGajjar20/PHP-StickWithIt"
   },
   {
-    "id": "project_6",
+    "id": "project_5",
     "title": "music-app",
     "description": "A simple music web application created using Vue.js with Tailwind CSS. You can play and pause the song and go to the next and previous song or click on the song to play.",
-    "topics": ["vue.js", "sass", "tailwind css"],
+    "tech": "VUE.JS",
     "link": "https://github.com/JenilGajjar20/music-app"
   },
   {
-    "id": "project_7",
+    "id": "project_6",
     "title": "crud-app",
     "description": "A simple crud app using Node.js and Express.js.",
-    "topics": ["node.js", "express.js", "crud-application"],
+    "tech": "NODE.JS",
     "link": "https://github.com/JenilGajjar20/crud-app"
   },
   {
-    "id": "project_8",
+    "id": "project_7",
     "title": "iNoteBook",
     "description": "You can add your note with title, description and tag (optional). You can also edit the note, delete the note whenever you need.",
-    "topics": ["node.js", "mpngodb", "react.js", "express.js", "tailwind css"],
+    "tech": "JAVASCRIPT",
     "link": "https://github.com/JenilGajjar20/iNoteBook"
   }
 ]
