@@ -17,12 +17,20 @@
           </p>
         </div>
 
-        <!-- Primary Resume Button -->
-        <ButtonDefault
-          text="Resume"
-          class="button--outline"
-          @click="openResume"
-        />
+        <div class="flex items-center gap-4">
+          <RouterLink
+            to="/blogs"
+            class="border-2 border-white px-8 py-2 hover:border-bright_yellow hover:text-bright_yellow"
+          >
+            Blogs
+          </RouterLink>
+          <!-- Primary Resume Button -->
+          <ButtonDefault
+            text="Resume"
+            class="button--outline"
+            @click="openResume"
+          />
+        </div>
       </div>
     </div>
   </div>

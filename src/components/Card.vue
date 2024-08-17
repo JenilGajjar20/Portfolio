@@ -3,24 +3,18 @@
     <div class="cards-content">
       <div class="card--data">
         <div class="card--top">
-          <p>{{ item.title }}</p>
+          <span>{{ item?.category ? item.category : item.tech }}</span>
           <a :href="item.link" target="_blank">
             <IconsMdiArrowTopRight
-              class="mt-1.5 text-xl text-gray-500 hover:text-black"
+              class="mt-1.5 text-xl text-white hover:text-gray-500"
             />
           </a>
         </div>
 
-        <div v-if="item.description" class="card--middle">
-          <p v-html="item.description" />
-        </div>
-
         <div class="card--bottom">
-          <div v-if="item.topics?.length" class="topics">
-            <p>Topics:</p>
-            <span v-for="(topic, index) in item.topics" :key="index" class="">
-              {{ topic }}
-            </span>
+          <h6>{{ item.title }}</h6>
+          <div v-if="item.description" class="card--desc">
+            <p v-html="item.description" />
           </div>
         </div>
       </div>
@@ -52,39 +46,28 @@ defineProps(["item"]);
       }
     }
     &--data {
-      @apply bg-white rounded p-4;
+      @apply bg-gray-900 rounded p-4;
     }
     &--top {
-      @apply flex items-start justify-between gap-3;
-      p {
-        @apply text-lg md:text-xl text-black font-bold;
+      @apply flex items-center justify-between gap-3;
+      span {
+        @apply font-bold text-blue-700 text-sm;
       }
     }
-    &--middle {
+
+    &--bottom {
       @apply py-4;
+      h6 {
+        @apply text-lg md:text-xl text-white font-bold pb-4;
+      }
+    }
+    &--desc {
       p {
-        @apply text-gray-500;
+        @apply text-gray-300;
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
-      }
-    }
-    &--bottom {
-      @apply text-gray-700 flex items-center gap-2 flex-wrap;
-      span {
-        @apply border border-gray-500 rounded px-2 py-1 text-xs;
-      }
-      .topics,
-      .categories {
-        @apply flex items-center gap-2 flex-wrap;
-        p {
-          @apply font-bold text-sm;
-        }
-      }
-      .created-at,
-      .pub-date {
-        @apply flex items-center gap-2 pt-3;
       }
     }
   }
