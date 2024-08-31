@@ -7,45 +7,45 @@
       <div class="skills-content__data">
         <div class="skill-data">
           <div
-            class="grid grid-cols-3 gap-7 md:grid-cols-4 md:gap-10 lg:gap-14"
+            class="grid grid-cols-2 gap-7 md:grid-cols-3 md:gap-10 lg:gap-14 lg:grid-cols-4"
           >
-            <div class="text-center">
+            <div class="common-class">
               <IconsHtml class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">HTML</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsCSS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">CSS</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsTailwind class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">Tailwind CSS</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsJS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">JavaScript</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsVue class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">Vue.js</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsNuxt class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">Nuxt.js</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsPython class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">Python</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsKaliLinux class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">Kali Linux</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsBurpSuite class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">BurpSuite</p>
             </div>
-            <div class="text-center">
+            <div class="common-class">
               <IconsWireShark class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
               <p class="font-bold">Wireshark</p>
             </div>
@@ -75,6 +75,12 @@ import IconsWireShark from "@/components/icons/Wireshark.vue";
     @apply pt-5 md:pt-10;
     .skill-data {
       @apply space-y-5 md:space-y-8;
+      .common-class {
+        @apply text-center bg-gray-900 flex flex-col items-center justify-center py-7 lg:py-10 rounded-lg;
+        p {
+          @apply lg:text-lg;
+        }
+      }
     }
   }
 }
