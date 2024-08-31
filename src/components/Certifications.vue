@@ -13,12 +13,12 @@
           <div class="flex md:items-center justify-between">
             <h4 class="font-bold text-xl md:text-2xl">
               {{ certificate.title }},
-              <span class="font-normal text-base md:text-xl">
-                {{ certificate.platform }}
+              <span class="text-base text-gray-500 font-bold">
+                {{ certificate.platform.toUpperCase() }}
               </span>
             </h4>
             <p class="whitespace-nowrap text-sm text-gray-400 md:text-base">
-              {{ certificate.month + " " + certificate.year }}
+              {{ certificate.month.toUpperCase() + " " + certificate.year }}
             </p>
           </div>
           <ul>
@@ -51,6 +51,7 @@ onMounted(() => {
 .certificates-data {
   @apply pt-5 md:pt-10 space-y-5 md:space-y-8;
   .certificate {
+    @apply bg-gray-900 p-6 rounded-md;
     ul {
       @apply mt-4;
     }
