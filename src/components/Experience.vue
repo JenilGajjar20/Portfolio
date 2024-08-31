@@ -14,7 +14,13 @@
                   {{ "- " + exp.company_name + ", " + exp.location }}
                 </span>
               </h4>
-              <p>{{ exp.start_date + " - " + exp.end_date }}</p>
+              <p>
+                {{
+                  exp.start_date.toUpperCase() +
+                  " - " +
+                  exp.end_date.toUpperCase()
+                }}
+              </p>
             </div>
             <ul class="card-mid">
               <li v-for="desc in exp.description" :key="desc">
@@ -43,27 +49,27 @@ onMounted(() => {
 <style lang="scss">
 .experience-cards {
   @apply pt-4 lg:pt-10;
-}
-
-.cards-content {
-  .card {
-    @apply pt-5;
-    &-top {
-      @apply lg:flex lg:items-center lg:justify-between;
-      h4 {
-        @apply font-bold text-lg lg:text-2xl;
-        span {
-          @apply text-base text-gray-400;
+  .cards-content {
+    @apply space-y-6;
+    .card {
+      @apply pt-5 bg-gray-900 rounded-md p-6;
+      &-top {
+        @apply lg:flex lg:items-center lg:justify-between;
+        h4 {
+          @apply font-bold text-lg lg:text-2xl;
+          span {
+            @apply text-base text-gray-400;
+          }
+        }
+        p {
+          @apply text-sm text-gray-400;
         }
       }
-      p {
-        @apply text-sm text-gray-400;
-      }
-    }
-    &-mid {
-      @apply text-sm py-2 lg:text-base;
-      li {
-        @apply list-disc ml-4;
+      &-mid {
+        @apply text-sm py-2 lg:text-base;
+        li {
+          @apply list-disc ml-4;
+        }
       }
     }
   }

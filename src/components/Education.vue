@@ -59,12 +59,12 @@ onMounted(() => {
   @apply pt-4 md:pt-10;
   .cards {
     &-content {
-      @apply grid gap-6;
+      @apply space-y-4;
     }
   }
   .card {
     &--data {
-      @apply bg-black text-white;
+      @apply bg-gray-900 p-6 rounded-md h-fit;
     }
   }
 }
