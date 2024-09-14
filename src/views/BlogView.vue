@@ -29,9 +29,9 @@ import HLine from "@/components/HLine.vue";
   &-latest {
     @apply lg:flex lg:items-start lg:gap-6;
     &__img {
-      @apply mb-4 lg:mb-0;
+      @apply mb-4 lg:mb-0 md:w-full;
       img {
-        @apply w-full h-72 md:h-96 lg:h-full rounded-lg;
+        @apply w-full md:h-80 rounded-lg;
       }
     }
   }

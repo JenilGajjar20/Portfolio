@@ -76,7 +76,7 @@ import IconsWireShark from "@/components/icons/Wireshark.vue";
     .skill-data {
       @apply space-y-5 md:space-y-8;
       .common-class {
-        @apply text-center bg-gray-900 flex flex-col items-center justify-center py-7 lg:py-10 rounded-lg;
+        @apply text-center bg-gray-900 flex flex-col items-center justify-center py-7 lg:py-10 rounded-lg hover:border hover:border-white;
         p {
           @apply lg:text-lg;
         }

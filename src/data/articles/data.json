@@ -1,6 +1,16 @@
 [
   {
     "id": "article_1",
+    "platform": "Hashnode",
+    "title": "Automating Tasks with Cron Jobs: A Beginner's Guide",
+    "desc": "In the world of Linux, automation is the key to efficient system management and maintenance. One of the most powerful tools for task automation is cron, a time-based job scheduler. Whether you need to perform regular backups, clean up logs, or run custom scripts, cron can handle it all. This guide will introduce you to the basics of cron, how to schedule tasks using cron jobs, an example code, and best practices for managing automated tasks.",
+    "link": "https://jenilgajjar.hashnode.dev/automating-tasks-with-cron-jobs-a-beginners-guide",
+    "date_published": "Jul 4, 2024",
+    "read_time": "3",
+    "image": "cron-jobs.png"
+  },
+  {
+    "id": "article_2",
     "platform": "Medium",
     "desc": "Embarking on an exhilarating journey with my office colleagues, I had the privilege of attending the highly anticipated JavaScript Conference India 2023 held in Bengaluru. Little did I know that this trip would become a perfect blend of professional growth 📈, technological marvels 🌟, exploring the vibrant city 🏙️, meeting passionate developers from different countries 🌍, and even a memorable first flight experience ✈️.",
     "title": "From Skies to Insights: JavaScript Conference India 2023 and the Spirit of Bengaluru",
@@ -10,7 +20,7 @@
     "image": "banglore_conf.png"
   },
   {
-    "id": "article_2",
+    "id": "article_3",
     "platform": "Medium",
     "desc": "The product we developed was named Ayurveda 🌿. Ayurveda is a traditional Indian natural system of medicine that originated in India more than 3,000 years ago. According to Ayurveda, Vata, Pitta, and Kapha are the human body’s three fundamental energies or principles. These three principles are thought to govern all physiological and psychological processes in the body, and they are said to determine a person’s body and overall health.",
     "title": "The Product we built during Hackathon",
@@ -20,7 +30,7 @@
     "image": "product_hack.png"
   },
   {
-    "id": "article_3",
+    "id": "article_4",
     "platform": "Medium",
     "desc": "In this article, I will share my experience about 36 hours long in-person hackathon organized by Hack This Fall at Karnavati University, Gandhinagar, India from 3rd to 5th February. It was my first external hackathon, and I had a wonderful experience. People came from all over India to participate in the hackathon. Around 506 lucky participants (including me 😁) got selected and formed 144 teams.",
     "title": "My Experience at Hack This Fall 3.0 Hackathon",
@@ -30,7 +40,7 @@
     "image": "experience_hack.png"
   },
   {
-    "id": "article_4",
+    "id": "article_5",
     "platform": "Medium",
     "desc": "In this medium article, I will show you how to perform basic CRUD operations with the help of Node.js and Express.js. You will also get an idea of project setup in Node.",
     "title": "CRUD operation using Node.js and Express.js",
@@ -40,7 +50,7 @@
     "image": "crud_op.png"
   },
   {
-    "id": "article_5",
+    "id": "article_6",
     "platform": "Medium",
     "desc": "In this article, we will learn and understand the definition of Inheritance, syntax, different modes of Inheritance, and various types of Inheritance in C++.",
     "title": "Inheritance in CPP",
@@ -50,7 +60,7 @@
     "image": "inheritance_cpp.png"
   },
   {
-    "id": "article_6",
+    "id": "article_7",
     "platform": "Medium",
     "desc": "Hello everyone, this is my first ever article on medium. I have created a Calculator using Vue.js along with Tailwind CSS. I am going to explain the setup of my project and will also explain to you a few things.",
     "title": "Calculator in Vue.js along with Tailwind CSS",

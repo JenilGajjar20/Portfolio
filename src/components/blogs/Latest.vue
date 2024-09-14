@@ -3,7 +3,7 @@
   <div class="blogs-latest">
     <div class="blogs-latest__img">
       <img
-        src="@/assets/images/cron-jobs.png"
+        :src="`/images/${latest.image}`"
         alt="Automating Tasks with Cron Jobs: A Beginner's Guide"
       />
     </div>
@@ -24,7 +24,7 @@
           {{ latest.title }}
         </a>
         <p class="mt-4 text-gray-500 xl:mt-6 xl:text-lg">
-          {{ latest.desc.substring(0, 350) + "..." }}
+          {{ latest.desc.substring(0, 300) + "..." }}
         </p>
       </div>
       <div class="mt-4 flex items-center gap-2 text-gray-600">
@@ -40,11 +40,13 @@ import IconsMdiRead from "@/components/icons/MdiRead.vue";
 
 const latest = {
   platform: "Hashnode",
-  title: "Automating Tasks with Cron Jobs: A Beginner's Guide",
-  desc: "In the world of Linux, automation is the key to efficient system management and maintenance. One of the most powerful tools for task automation is cron, a time-based job scheduler. Whether you need to perform regular backups, clean up logs, or run custom scripts, cron can handle it all. This guide will introduce you to the basics of cron, how to schedule tasks using cron jobs, an example code, and best practices for managing automated tasks.",
-  link: "https://jenilgajjar.hashnode.dev/automating-tasks-with-cron-jobs-a-beginners-guide",
-  date_published: "Jul 4, 2024",
-  read_time: "3",
+  desc: "In this article, we will explore the concept of keyloggers, their various types, and their practical applications. From capturing user input to logging it efficiently, keyloggers can serve multiple purposes, both good and bad. I will walk you through a simple implementation using Python, dissect the code for a better understanding, and discuss the ethical considerations every developer must keep in mind when using such a tool.",
+  title:
+    "Implementing a Keylogger: A Comprehensive Approach to Keystroke Tracking",
+  link: "https://jenilgajjar.hashnode.dev/implementing-a-keylogger-a-comprehensive-approach-to-keystroke-tracking",
+  date_published: "Sept 14, 2024",
+  read_time: "5",
+  image: "keylogger.png",
 };
 </script>
 
