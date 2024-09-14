@@ -5,10 +5,7 @@
       <a href="https://twitter.com/gajjar_jenil" target="_blank">
         <IconsMdiTwitter class="text-gray-400 hover:text-white" />
       </a>
-      <a
-        href="https://www.linkedin.com/in/jenil-gajjar-27934920a/"
-        target="_blank"
-      >
+      <a href="https://www.linkedin.com/in/jenilgajjar/" target="_blank">
         <IconsMdiLinkedIn class="text-gray-400 hover:text-white" />
       </a>
     </div>
