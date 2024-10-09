@@ -14,7 +14,6 @@
 import Blogs from "@/components/blogs/Index.vue";
 import BlogsLatest from "@/components/blogs/Latest.vue";
 import BlogsArticles from "@/components/blogs/Articles.vue";
-import HLine from "@/components/HLine.vue";
 </script>
 
 <style lang="scss">
