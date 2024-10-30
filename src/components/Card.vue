@@ -30,7 +30,7 @@ defineProps(["item"]);
 
 <style lang="scss">
 .projects--lists {
-  @apply pt-10 md:gap-8 md:columns-3;
+  @apply pt-10 md:gap-8 md:columns-2 lg:columns-3;
   .cards {
     @apply mb-8 md:break-inside-avoid;
     &-content {

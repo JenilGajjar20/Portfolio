@@ -18,7 +18,7 @@
                 {{
                   exp.start_date.toUpperCase() +
                   " - " +
-                  exp.end_date.toUpperCase()
+                  (exp.end_date ? exp.end_date.toUpperCase() : "PRESENT")
                 }}
               </p>
             </div>
@@ -62,7 +62,7 @@ onMounted(() => {
           }
         }
         p {
-          @apply text-sm text-gray-400;
+          @apply my-1 text-xs font-bold text-white bg-gray-700 py-1 px-1.5 rounded w-fit;
         }
       }
       &-mid {

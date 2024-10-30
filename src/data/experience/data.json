@@ -1,6 +1,19 @@
 [
   {
     "id": "exp_1",
+    "role": "IoT Intern",
+    "company_name": "Rejig Digital",
+    "description": [
+      "Developing IoT applications using Angular, Nest.js, and Node.js for interactive and scalable solutions",
+      "Managing Postgresql databases for real-time data handling.",
+      "Using Git for version control and team coordination."
+    ],
+    "start_date": "Aug 2024",
+    "end_date": "",
+    "location": "Ahmedabad"
+  },
+  {
+    "id": "exp_2",
     "role": "Frontend Developer",
     "company_name": "7Span Internet Private Limited",
     "description": [
@@ -10,12 +23,12 @@
       "Utilized version control systems such as Git to track changes throughout the development process.",
       "Collaborated with back-end developers to improve website functionality and integrate new features."
     ],
-    "start_date": "June 2022",
-    "end_date": "July 2023",
+    "start_date": "Jun 2022",
+    "end_date": "Jul 2023",
     "location": "Ahmedabad"
   },
   {
-    "id": "exp_2",
+    "id": "exp_3",
     "role": "Frontend Intern",
     "company_name": "7Span Internet Private Limited",
     "description": [
