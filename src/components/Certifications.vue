@@ -17,7 +17,9 @@
                 {{ certificate.platform.toUpperCase() }}
               </span>
             </h4>
-            <p class="whitespace-nowrap text-sm text-gray-400 md:text-base">
+            <p
+              class="py-1 px-1.5 rounded bg-gray-700 whitespace-nowrap text-xs text-white font-bold h-fit"
+            >
               {{ certificate.month.toUpperCase() + " " + certificate.year }}
             </p>
           </div>

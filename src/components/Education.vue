@@ -21,7 +21,7 @@
             <div class="flex items-center justify-between">
               <p class="text-gray-400 text-sm">{{ edu.qualification }}</p>
               <p
-                class="text-sm text-right font-bold text-gray-400 whitespace-nowrap"
+                class="text-xs text-right font-bold text-white py-1 px-1.5 rounded bg-gray-700 whitespace-nowrap"
               >
                 {{ edu.from }} - {{ edu.to }}
               </p>

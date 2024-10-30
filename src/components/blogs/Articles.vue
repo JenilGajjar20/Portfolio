@@ -4,7 +4,7 @@
     <div
       v-for="article in articles"
       :key="article.id"
-      class="bg-gray-800 rounded overflow-hidden lg:flex lg:items-center lg:gap-6"
+      class="bg-gray-900 rounded overflow-hidden lg:flex lg:items-center lg:gap-6"
     >
       <div class="blogs-articles__img">
         <img :src="`/images/${article.image}`" :alt="article.title" />
