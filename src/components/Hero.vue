@@ -27,6 +27,7 @@
           <!-- Primary Resume Button -->
           <ButtonDefault
             text="Resume"
+            icon
             class="button--outline"
             @click="openResume"
           />
