@@ -5,6 +5,8 @@
       v-if="icon"
       class="duration-100 group-hover:-translate-y-1 group-hover:translate-x-1"
     />
+
+    <IconsMdiLoading v-if="isLoading" class="animate-spin ml-2" />
   </button>
 </template>
 
@@ -14,8 +16,13 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  isLoading: {
+    type: Boolean,
+    default: false,
+  },
 });
 import IconsMdiArrowTopRight from "@/components/icons/MdiArrowTopRight.vue";
+import IconsMdiLoading from "@/components/icons/MdiLoading.vue";
 </script>
 
 <style lang="scss" scoped>

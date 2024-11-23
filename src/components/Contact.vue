@@ -35,15 +35,33 @@
         <HLine class="md:hidden" />
 
         <form @submit.prevent="submitForm" class="form">
-          <input type="text" placeholder="Enter your name" />
-          <input type="email" placeholder="Enter your email" />
-          <input type="number" placeholder="Enter your number" />
+          <input
+            type="text"
+            v-model="form.name"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            v-model="form.email"
+            placeholder="Enter your email"
+            required
+          />
           <textarea
             name=""
+            v-model="form.message"
             rows="5"
             placeholder="Enter your message..."
+            required
           ></textarea>
-          <ButtonDefault text="Submit" class="ml-auto button--outline" />
+          <div class="flex items-center justify-between">
+            <p v-if="messageSuccess">{{ messageSuccess }}</p>
+            <ButtonDefault
+              text="Submit"
+              :is-loading="isLoading"
+              class="ml-auto button--outline"
+            />
+          </div>
         </form>
       </div>
     </div>
@@ -51,10 +69,49 @@
 </template>
 
 <script setup>
+import emailjs from "@emailjs/browser";
+
 import ButtonDefault from "@/components/button/Default.vue";
+import { ref } from "vue";
+
+const form = ref({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const messageSuccess = ref("");
+const isLoading = ref(false);
 
 const submitForm = () => {
-  console.log("submitForm");
+  isLoading.value = true;
+
+  const tempalateParams = {
+    name: form.value.name,
+    email: form.value.email,
+    message: form.value.message,
+  };
+
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+  emailjs.send(serviceId, templateId, tempalateParams, publicKey).then(
+    (response) => {
+      if (response.status === 200) {
+        messageSuccess.value = "Message Sent successfully!";
+      }
+
+      setInterval(() => {
+        messageSuccess.value = "";
+        form.value = {};
+        isLoading.value = false;
+      }, 2000);
+    },
+    (error) => {
+      console.error("error:", error);
+    }
+  );
 };
 </script>
 
