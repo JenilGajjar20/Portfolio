@@ -6,28 +6,30 @@
       </div>
       <div class="experience-cards">
         <div class="cards-content">
-          <div class="card" v-for="exp in experienceDetails" :key="exp.id">
-            <div class="card-top">
-              <h4>
-                {{ exp.role }}
-                <span>
-                  {{ "- " + exp.company_name + ", " + exp.location }}
-                </span>
-              </h4>
-              <p>
-                {{
-                  exp.start_date.toUpperCase() +
-                  " - " +
-                  (exp.end_date ? exp.end_date.toUpperCase() : "PRESENT")
-                }}
-              </p>
+          <template v-for="exp in experienceDetails" :key="exp.id">
+            <div class="card" v-if="exp.show">
+              <div class="card-top">
+                <h4>
+                  {{ exp.role }}
+                  <span>
+                    {{ "- " + exp.company_name + ", " + exp.location }}
+                  </span>
+                </h4>
+                <p>
+                  {{
+                    exp.start_date.toUpperCase() +
+                    " - " +
+                    (exp.end_date ? exp.end_date.toUpperCase() : "PRESENT")
+                  }}
+                </p>
+              </div>
+              <ul class="card-mid">
+                <li v-for="desc in exp.description" :key="desc">
+                  {{ desc }}
+                </li>
+              </ul>
             </div>
-            <ul class="card-mid">
-              <li v-for="desc in exp.description" :key="desc">
-                {{ desc }}
-              </li>
-            </ul>
-          </div>
+          </template>
         </div>
       </div>
     </div>
