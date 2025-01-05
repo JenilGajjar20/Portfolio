@@ -25,6 +25,7 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins, sans-serif"],
       oswald: ["Oswald, sans-serif"],
+      greatVibes: ["Great Vibes, sans-serif"],
     },
   },
   plugins: [],

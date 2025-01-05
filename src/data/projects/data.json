@@ -3,50 +3,52 @@
     "id": "project_1",
     "title": "LinuxAdminToolkit",
     "description": "This repository is a comprehensive collection of essential Linux commands, networking configurations, services management, monitoring tools, logging practices, and shell scripting examples.",
-    "category": "LINUX",
-    "link": "https://github.com/JenilGajjar20/LinuxAdminToolkit",
+    "category": "linux",
+    "color": "blue",
+    "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/",
     "t_color": "text-red-500"
   },
   {
     "id": "project_2",
     "title": "PyCyberSecurity",
     "description": "This repository contains a collection of python scripts and projects related to various cybersecurity tasks.",
-    "tech": "PYTHON",
+    "tech": "python",
     "link": "https://github.com/JenilGajjar20/PyCyberSecurity"
   },
   {
     "id": "project_3",
     "title": "InternetBanking",
     "description": "This project provides users with a secure and user-friendly platform to manage their bank accounts online.",
-    "tech": "JAVASCRIPT",
+    "tech": "javascript",
     "link": "https://github.com/JenilGajjar20/internet-banking"
   },
   {
     "id": "project_4",
     "title": "StickWithIt",
     "description": "StickWithIt is an online food ordering website created using PHP. You can view and purchase various items as well as remove items from the cart.",
-    "tech": "PHP",
+    "tech": "php",
+    "color": "purple",
     "link": "https://github.com/JenilGajjar20/PHP-StickWithIt"
   },
   {
     "id": "project_5",
     "title": "music-app",
     "description": "A simple music web application created using Vue.js with Tailwind CSS. You can play and pause the song and go to the next and previous song or click on the song to play.",
-    "tech": "VUE.JS",
+    "tech": "vue",
     "link": "https://github.com/JenilGajjar20/music-app"
   },
   {
     "id": "project_6",
     "title": "crud-app",
     "description": "A simple crud app using Node.js and Express.js.",
-    "tech": "NODE.JS",
+    "tech": "node",
     "link": "https://github.com/JenilGajjar20/crud-app"
   },
   {
     "id": "project_7",
     "title": "iNoteBook",
     "description": "You can add your note with title, description and tag (optional). You can also edit the note, delete the note whenever you need.",
-    "tech": "JAVASCRIPT",
+    "tech": "javascript",
     "link": "https://github.com/JenilGajjar20/iNoteBook"
   }
 ]

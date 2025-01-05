@@ -3,7 +3,19 @@
     <div class="cards-content">
       <div class="card--data">
         <div class="card--top">
-          <span>{{ item?.category ? item.category : item.tech }}</span>
+          <p
+            class="card--top_badge"
+            :class="{
+              'text-blue-700': item?.category === 'linux',
+              'text-purple-700': item?.tech === 'php',
+              'text-blue-500': item?.tech === 'python',
+              'text-yellow-500': item?.tech === 'javascript',
+              'text-green-500': item?.tech === 'vue',
+              'text-green-800': item?.tech === 'node',
+            }"
+          >
+            <span>{{ item?.category ? item.category : item.tech }}</span>
+          </p>
           <a :href="item.link" target="_blank">
             <IconsMdiArrowTopRight
               class="mt-1.5 text-xl text-white hover:text-gray-500"
@@ -50,8 +62,11 @@ defineProps(["item"]);
     }
     &--top {
       @apply flex items-center justify-between gap-3;
-      span {
-        @apply font-bold text-blue-700 text-sm;
+      &_badge {
+        @apply bg-gray-800 px-2 rounded;
+        span {
+          @apply font-bold text-xs uppercase;
+        }
       }
     }
 
