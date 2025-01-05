@@ -6,9 +6,12 @@
       @apply flex items-center justify-between;
     }
   }
+  &-link {
+    @apply font-greatVibes border-none lg:text-2xl hover:text-yellow-500;
+  }
   &-content__logo {
-    img{
-      @apply h-14 w-14 md:h-20 md:w-20 rounded-full; 
+    img {
+      @apply h-14 w-14 md:h-20 md:w-20 rounded-full;
     }
   }
   &-content__menu {
@@ -18,7 +21,7 @@
     // @apply hidden md:block;
   }
   &-items {
-    @apply flex items-center gap-3;
+    @apply flex items-center justify-center gap-3;
   }
   &-menu-icon {
     @apply text-2xl;

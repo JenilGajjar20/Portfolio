@@ -10,44 +10,48 @@
             class="grid grid-cols-2 gap-7 md:grid-cols-3 md:gap-10 lg:gap-14 lg:grid-cols-4"
           >
             <div class="common-class">
-              <IconsHtml class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">HTML</p>
+              <IconsHtml class="icon" />
+              <p>HTML</p>
             </div>
             <div class="common-class">
-              <IconsCSS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">CSS</p>
+              <IconsCSS class="icon" />
+              <p>CSS</p>
             </div>
             <div class="common-class">
-              <IconsTailwind class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">Tailwind CSS</p>
+              <IconsTailwind class="icon" />
+              <p>Tailwind CSS</p>
             </div>
             <div class="common-class">
-              <IconsJS class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">JavaScript</p>
+              <IconsJS class="icon" />
+              <p>JavaScript</p>
             </div>
             <div class="common-class">
-              <IconsVue class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">Vue.js</p>
+              <IconsPHP class="icon" />
+              <p>PHP</p>
             </div>
             <div class="common-class">
-              <IconsNuxt class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">Nuxt.js</p>
+              <IconsVue class="icon" />
+              <p>Vue.js</p>
             </div>
             <div class="common-class">
-              <IconsPython class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">Python</p>
+              <IconsNuxt class="icon" />
+              <p>Nuxt.js</p>
             </div>
             <div class="common-class">
-              <IconsKaliLinux class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">Kali Linux</p>
+              <IconsPython class="icon" />
+              <p>Python</p>
             </div>
             <div class="common-class">
-              <IconsBurpSuite class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">BurpSuite</p>
+              <IconsKaliLinux class="icon" />
+              <p>Kali Linux</p>
             </div>
             <div class="common-class">
-              <IconsWireShark class="mx-auto h-10 w-10 mb-2 md:h-20 md:w-20" />
-              <p class="font-bold">Wireshark</p>
+              <IconsBurpSuite class="icon" />
+              <p>BurpSuite</p>
+            </div>
+            <div class="common-class">
+              <IconsWireShark class="icon" />
+              <p>Wireshark</p>
             </div>
           </div>
         </div>
@@ -67,6 +71,7 @@ import IconsPython from "@/components/icons/Python.vue";
 import IconsKaliLinux from "@/components/icons/KaliLinux.vue";
 import IconsBurpSuite from "@/components/icons/BurpSuite.vue";
 import IconsWireShark from "@/components/icons/Wireshark.vue";
+import IconsPHP from "@/components/icons/Php.vue";
 </script>
 
 <style lang="scss">
@@ -76,9 +81,12 @@ import IconsWireShark from "@/components/icons/Wireshark.vue";
     .skill-data {
       @apply space-y-5 md:space-y-8;
       .common-class {
-        @apply text-center bg-gray-900 flex flex-col items-center justify-center py-7 lg:py-10 rounded-lg hover:border hover:border-white;
+        @apply text-center bg-gray-900 flex flex-col items-center justify-center py-4 lg:py-10 rounded-lg hover:border hover:border-white;
+        .icon {
+          @apply mx-auto h-10 w-10 mb-2 md:h-20 md:w-20;
+        }
         p {
-          @apply lg:text-lg;
+          @apply font-bold lg:text-lg;
         }
       }
     }

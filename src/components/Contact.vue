@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-section">
+  <div class="contact-section" id="contact">
     <div class="contact-section__content">
       <div class="content-header">
         <h2>Contact Me</h2>
@@ -15,7 +15,7 @@
 
             <ul>
               <p>You can:</p>
-              <li>Drop me a message using the contact form below.</li>
+              <li>Drop me a message using the contact form.</li>
               <li>Get in touch via email or phone.</li>
             </ul>
           </div>
@@ -145,7 +145,7 @@ const submitForm = () => {
         @apply space-y-4;
       }
       .my-info {
-        @apply lg:flex lg:items-center lg:justify-between bg-gray-200 text-gray-800 py-2 px-4 font-bold rounded-md lg:py-4;
+        @apply bg-gray-200 text-yellow-600 py-2 px-4 font-bold rounded-md lg:py-4 lg:flex lg:items-center lg:justify-between;
       }
     }
   }

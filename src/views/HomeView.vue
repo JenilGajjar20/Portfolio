@@ -4,9 +4,9 @@
 
     <HLine />
 
-    <Education />
+    <!-- <Education /> -->
 
-    <HLine />
+    <!-- <HLine /> -->
 
     <Experience />
 
