@@ -6,14 +6,68 @@
     "category": "linux",
     "color": "blue",
     "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/",
-    "t_color": "text-red-500"
+    "t_color": "text-red-500",
+    "modalTitle": "Guide for Linux administrators",
+    "projects": [
+      {
+        "id": "1",
+        "title": "Commands",
+        "subTitle": "Master essential Linux commands for managing files, processes, users, and system resources.",
+        "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/administrator-manual/commands/"
+      },
+      {
+        "id": "2",
+        "title": "Networking",
+        "subTitle": "Understand networking concepts, configure IP addresses, and troubleshoot network issues.",
+        "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/administrator-manual/networking/"
+      },
+      {
+        "id": "3",
+        "title": "Monitoring and Logging",
+        "subTitle": "Explore tools and technologies for monitoring system performance and analyzing logs.",
+        "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/administrator-manual/monitoring-logging/"
+      },
+      {
+        "id": "4",
+        "title": "Shell Scripting",
+        "subTitle": "Automate repetitive tasks and improve efficiency with advanced shell scripting techniques.",
+        "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/administrator-manual/shell-scripting/"
+      }
+    ]
   },
   {
     "id": "project_2",
     "title": "PyCyberSecurity",
     "description": "This repository contains a collection of python scripts and projects related to various cybersecurity tasks.",
     "tech": "python",
-    "link": "https://github.com/JenilGajjar20/PyCyberSecurity"
+    "link": "https://github.com/JenilGajjar20/PyCyberSecurity",
+    "modalTitle": "List of Projects",
+    "projects": [
+      {
+        "id": "1",
+        "title": "File Identification",
+        "subTitle": "Identify and Detect Embedded File Types Using Magic Numbers",
+        "link": "https://github.com/JenilGajjar20/PyCyberSecurity/tree/master/file_identification"
+      },
+      {
+        "id": "2",
+        "title": "Firewall",
+        "subTitle": "Dynamic Firewall Simulation with Rule-Based Packet Filtering",
+        "link": "https://github.com/JenilGajjar20/PyCyberSecurity/tree/master/firewall"
+      },
+      {
+        "id": "3",
+        "title": "Keylogger",
+        "subTitle": "Monitor and Log Keystrokes with a Timed Listener",
+        "link": "https://github.com/JenilGajjar20/PyCyberSecurity/tree/master/keylogger"
+      },
+      {
+        "id": "4",
+        "title": "System Monitor",
+        "subTitle": "Monitor Server Performance and Automate Log Emailing",
+        "link": "https://github.com/JenilGajjar20/PyCyberSecurity/tree/master/system-monitor"
+      }
+    ]
   },
   {
     "id": "project_3",

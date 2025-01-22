@@ -1,43 +1,39 @@
 <template>
   <div class="hero-section">
     <div class="hero-section--content">
-      <div class="profile-card w-full">
+      <div class="profile-card">
         <img src="/images/jenil.jpg" alt="profile-image" />
         <p class="profile-card--text">
           Developer &sdot; Open-Source Contributor &sdot; Cybersecurity
           Enthusiast
         </p>
-        <!-- <div class="flex items-center justify-center gap-4 text-2xl">
-          <a href="https://twitter.com/gajjar_jenil" target="_blank">
-            <IconsMdiTwitter class="text-gray-400 hover:text-yellow-500" />
-          </a>
-          <a href="https://www.linkedin.com/in/jenilgajjar/" target="_blank">
-            <IconsMdiLinkedIn class="text-gray-400 hover:text-yellow-500" />
-          </a>
-        </div> -->
+        <ButtonDefault
+          text="Resume"
+          icon
+          class="button--outline mt-2 flex items-center justify-center w-full mx-auto"
+          @click="openResume"
+        />
       </div>
 
       <div class="hero-text">
         <h1
-          class="text-4xl lg:text-5xl xl:text-7xl font-extrabold leading-tight text-white"
+          class="text-4xl xl:text-5xl 2xl:text-7xl font-extrabold leading-tight text-white"
         >
           Hi, I’m <span class="text-yellow-500">Jenil Gajjar</span>
         </h1>
-        <p class="text-gray-400 mt-4 lg:text-xl">
-          As a tech enthusiast, I thrive on continuous learning and adapting to
-          new technologies. With a self-driven approach, I excel in dynamic
-          environments and actively contribute to open-source projects.
-          Passionate about security, I aim to explore new technologies and make
-          impactful contributions to safeguarding digital assets.
+        <p class="text-gray-400 mt-4 lg:text-lg xl:text-xl">
+          As a passionate tech enthusiast, I thrive on continuous learning and
+          enthusiastically embrace new technologies. My adaptable mindset and
+          self-driven approach enable me to excel in dynamic work environments.
+          I actively contribute to open-source projects, embodying a commitment
+          to collaborative learning and innovation. Eager to delve into new
+          security technologies and methodologies, I bring a blend of curiosity,
+          dedication, and a strong desire to make meaningful contributions to
+          the ever-evolving tech landscape, with a specific focus on enhancing
+          security and protecting digital assets.
         </p>
         <div class="cta-buttons">
           <a href="#contact" class="get-in-touch-btn"> Get in Touch </a>
-          <!-- <ButtonDefault
-            text="Resume"
-            icon
-            class="button--outline"
-            @click="openResume"
-          /> -->
           <RouterLink to="/blogs" class="blogs"> Blogs </RouterLink>
         </div>
       </div>
@@ -46,8 +42,6 @@
 </template>
 
 <script setup>
-import IconsMdiTwitter from "@/components/icons/MdiTwitter.vue";
-import IconsMdiLinkedIn from "@/components/icons/MdiLinkedIn.vue";
 import ButtonDefault from "@/components/button/Default.vue";
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
@@ -64,10 +58,10 @@ const openResume = () => {
 .hero-section {
   @apply pt-10 md:pt-24;
   &--content {
-    @apply flex flex-col-reverse md:flex-row items-center gap-8 max-w-7xl mx-auto;
+    @apply flex flex-col-reverse lg:flex-row items-center gap-8 max-w-7xl mx-auto;
   }
   .profile-card {
-    @apply shadow-lg bg-gray-800 p-6 rounded-lg;
+    @apply shadow-lg bg-gray-800 p-6 rounded-lg w-auto;
     img {
       @apply rounded-md mx-auto;
     }

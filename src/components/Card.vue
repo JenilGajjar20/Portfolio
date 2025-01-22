@@ -16,11 +16,18 @@
           >
             <span>{{ item?.category ? item.category : item.tech }}</span>
           </p>
-          <a :href="item.link" target="_blank">
-            <IconsMdiArrowTopRight
-              class="mt-1.5 text-xl text-white hover:text-gray-500"
-            />
-          </a>
+          <div class="card--top_icon">
+            <button v-if="item.projects" @click="emit('openModal', item)">
+              <IconsMdiModal
+                class="mt-1.5 text-xl text-white hover:text-gray-500"
+              />
+            </button>
+            <a :href="item.link" target="_blank">
+              <IconsMdiArrowTopRight
+                class="mt-1.5 text-xl text-white hover:text-gray-500"
+              />
+            </a>
+          </div>
         </div>
 
         <div class="card--bottom">
@@ -35,9 +42,11 @@
 </template>
 
 <script setup>
+import IconsMdiModal from "@/components/icons/Modal.vue";
 import IconsMdiArrowTopRight from "@/components/icons/MdiArrowTopRight.vue";
 
 defineProps(["item"]);
+const emit = defineEmits(["openModal"]);
 </script>
 
 <style lang="scss">
@@ -67,6 +76,9 @@ defineProps(["item"]);
         span {
           @apply font-bold text-xs uppercase;
         }
+      }
+      &_icon {
+        @apply flex items-center gap-3;
       }
     }
 
