@@ -15,6 +15,12 @@
             <IconsMdiLinkedIn class="text-gray-400 hover:text-yellow-500" />
           </a>
         </div> -->
+        <ButtonDefault
+          text="Resume"
+          icon
+          class="button--outline mt-2 flex items-center justify-center w-full mx-auto"
+          @click="openResume"
+        />
       </div>
 
       <div class="hero-text">
