@@ -10,7 +10,9 @@
     ],
     "start_date": "Aug 2024",
     "end_date": "",
-    "location": "Ahmedabad"
+    "location": "Ahmedabad",
+    "show": false,
+    "current": true
   },
   {
     "id": "exp_2",
