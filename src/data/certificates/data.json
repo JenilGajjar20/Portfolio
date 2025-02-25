@@ -1,41 +1,62 @@
 [
   {
     "id": "certi_1",
+    "title": "Advent of Cyber 2024",
+    "platform": "TryHackMe",
+    "month": "December",
+    "date": "24",
+    "year": "2024",
+    "image": "advent_of_cyber",
+    "description": [
+      "Completed intensive 24-day cybersecurity challenge covering various security domains",
+      "Gained hands-on experience in digital forensics, web exploitation, and network security"
+    ]
+  },
+  {
+    "id": "certi_2",
     "title": "Tools of the trade: Linux and SQL",
     "platform": "Coursera",
-    "month": "Jan",
+    "month": "January",
+    "date": "14",
     "year": "2024",
+    "image": "tools_of_the_trade",
     "description": [
       "Gained proficiency in navigating and managing file systems using Linux Commands in the Bash Shell.",
       "Developed skills in using both Graphical User Interfaces (GUI) and Command line interfaces (CLI)."
     ]
   },
   {
-    "id": "certi_2",
+    "id": "certi_3",
     "title": "Connect and Protect: Networks and Network Security",
     "platform": "Coursera",
-    "month": "Jan",
+    "month": "January",
+    "date": "3",
     "year": "2024",
+    "image": "connect_protect_networks",
     "description": [
       "Acquired knowledge about various types of networks and components of networks."
     ]
   },
   {
-    "id": "certi_3",
+    "id": "certi_4",
     "title": "Play it Safe: Manage Security Risk",
     "platform": "Coursera",
-    "month": "Dec",
+    "month": "December",
+    "date": "26",
     "year": "2023",
+    "image": "play_it_safe",
     "description": [
       "Learned about threats, risks and vulnerabilities, and attained knowledge about SIEM tools."
     ]
   },
   {
-    "id": "certi_4",
+    "id": "certi_5",
     "title": "Foundation of Cybersecurity",
     "platform": "Coursera",
-    "month": "Dec",
+    "month": "December",
+    "date": "25",
     "year": "2023",
+    "image": "foundation_of_cybersecurity",
     "description": [
       "Recognized core skills and gained knowledge that is needed to become a cybersecurity analyst."
     ]
