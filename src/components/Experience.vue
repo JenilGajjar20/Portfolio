@@ -2,32 +2,57 @@
   <div class="experience">
     <div class="experience-content">
       <div class="content-header">
-        <h2>Experience</h2>
+        <h2 class="text-4xl font-bold mb-6">Experience</h2>
       </div>
       <div class="experience-cards">
-        <div class="cards-content">
-          <template v-for="exp in experienceDetails" :key="exp.id">
-            <div class="card" v-if="exp.show">
-              <div class="card-top">
-                <h4>
-                  {{ exp.role }}
-                  <span>
-                    {{ "- " + exp.company_name + ", " + exp.location }}
-                  </span>
-                </h4>
-                <p>
-                  {{
-                    exp.start_date.toUpperCase() +
-                    " - " +
-                    (exp.end_date ? exp.end_date.toUpperCase() : "PRESENT")
-                  }}
-                </p>
-              </div>
-              <ul class="card-mid">
-                <li v-for="desc in exp.description" :key="desc">
-                  {{ desc }}
-                </li>
-              </ul>
+        <div class="experience-cards__content">
+          <template
+            v-for="(companyGroup, index) in groupedExperiences"
+            :key="index"
+          >
+            <div class="company-logo">
+              <img
+                :src="getCompanyLogo(companyGroup[0].company_name)"
+                :alt="companyGroup[0].company_name + ' logo'"
+                class="company-logo-img"
+              />
+            </div>
+
+            <div class="company-experiences">
+              <template v-for="exp in companyGroup" :key="exp.id">
+                <div class="card" v-if="exp.show">
+                  <div class="card-top">
+                    <div>
+                      <h4 class="role-title">
+                        {{ exp.role }}
+                        <div class="verification-icon" v-if="exp.current">
+                          ✓
+                        </div>
+                      </h4>
+                      <p class="company-subtitle">
+                        {{
+                          exp.start_date +
+                          " - " +
+                          (exp.end_date ? exp.end_date : "Present")
+                        }}
+                        <span class="duration">{{
+                          calculateDuration(exp.start_date, exp.end_date)
+                        }}</span>
+                        • {{ exp.location }}
+                        <span>• Full-Time</span>
+                      </p>
+                    </div>
+                  </div>
+                  <ul class="card-mid">
+                    <li
+                      v-for="(desc, descIndex) in exp.description"
+                      :key="descIndex"
+                    >
+                      {{ desc }}
+                    </li>
+                  </ul>
+                </div>
+              </template>
             </div>
           </template>
         </div>
@@ -37,11 +62,68 @@
 </template>
 
 <script setup>
+import { onMounted, ref, computed } from "vue";
 import expData from "@/data/experience/data.json";
 
-import { onMounted, ref } from "vue";
-
 let experienceDetails = ref([]);
+
+const groupedExperiences = computed(() => {
+  const sorted = [...experienceDetails.value].sort((a, b) => {
+    const dateA = new Date(a.start_date);
+    const dateB = new Date(b.start_date);
+    return dateB - dateA;
+  });
+
+  const groupedByCompany = {};
+  sorted.forEach((exp) => {
+    if (exp.show !== false) {
+      if (!groupedByCompany[exp.company_name]) {
+        groupedByCompany[exp.company_name] = [];
+      }
+      groupedByCompany[exp.company_name].push(exp);
+    }
+  });
+
+  return Object.values(groupedByCompany);
+});
+
+const calculateDuration = (startDate, endDate) => {
+  const start = new Date(startDate);
+  const end = endDate ? new Date(endDate) : new Date();
+
+  const yearDiff = end.getFullYear() - start.getFullYear();
+  const monthDiff = end.getMonth() - start.getMonth();
+
+  let totalMonths = yearDiff * 12 + monthDiff;
+  if (end.getDate() < start.getDate()) {
+    totalMonths--;
+  }
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  let result = "";
+  if (years > 0) {
+    result += `${years} yr`;
+    if (years > 1) result += "s";
+  }
+
+  if (months > 0) {
+    if (result) result += ", ";
+    result += `${months} m`;
+  }
+
+  return `(${result})`;
+};
+
+const getCompanyLogo = (companyName) => {
+  const logoMap = {
+    "7Span Internet Private Limited": "/images/7Span.png",
+    "Rejig Digital": "/images/rejig-digital.png",
+  };
+
+  return logoMap[companyName] || "/assets/logos/default-logo.svg";
+};
 
 onMounted(() => {
   experienceDetails.value = expData;
@@ -51,27 +133,66 @@ onMounted(() => {
 <style lang="scss">
 .experience-cards {
   @apply pt-4 lg:pt-10;
-  .cards-content {
-    @apply space-y-6;
-    .card {
-      @apply pt-5 bg-gray-900 rounded-md p-6;
-      &-top {
-        @apply lg:flex lg:items-center lg:justify-between;
-        h4 {
-          @apply font-bold text-lg lg:text-2xl;
-          span {
-            @apply text-base text-gray-400;
-          }
-        }
-        p {
-          @apply my-1 text-xs font-bold text-white bg-gray-700 py-1 px-1.5 rounded w-fit;
+
+  &__content {
+    @apply relative pl-16;
+
+    &:before {
+      @apply content-[''] absolute bg-gray-600 h-full w-0.5 rounded left-6 top-6 bottom-0;
+    }
+  }
+
+  .company-logo {
+    @apply absolute left-0 z-10;
+    margin-top: 2px;
+
+    &-img {
+      @apply w-12 h-12 object-cover rounded-full bg-white;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .company-experiences {
+    @apply mb-10 relative;
+
+    &:before {
+      @apply content-[''] absolute bg-gray-600 h-full w-0.5 rounded top-6 bottom-0 -left-11 hidden;
+    }
+  }
+
+  .card {
+    @apply mb-6 relative;
+
+    &:before {
+      @apply content-[''] absolute bg-white w-2.5 h-2.5 rounded-full -left-11 top-2.5;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+
+    &-top {
+      @apply mb-3;
+
+      .role-title {
+        @apply font-bold text-xl flex items-center gap-2;
+
+        .verification-icon {
+          @apply text-white bg-green-700 rounded-full w-5 h-5 flex items-center justify-center text-sm;
         }
       }
-      &-mid {
-        @apply text-sm py-2 lg:text-base;
-        li {
-          @apply list-disc ml-4;
+
+      .company-subtitle {
+        @apply text-sm text-gray-400 mt-1 font-medium;
+
+        .duration {
+          @apply text-gray-500;
         }
+      }
+    }
+
+    &-mid {
+      @apply text-sm text-gray-300 space-y-2;
+
+      li {
+        @apply relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-gray-500;
       }
     }
   }
