@@ -11,11 +11,24 @@
             :key="index"
           >
             <div class="company-logo">
-              <img
-                :src="getCompanyLogo(companyGroup[0].company_name)"
-                :alt="companyGroup[0].company_name + ' logo'"
-                class="company-logo-img"
-              />
+              <div class="relative">
+                <div
+                  class="company-name"
+                  :class="{
+                    'show-company-name':
+                      showCompanyName === companyGroup[0].company_name,
+                  }"
+                >
+                  {{ companyGroup[0].company_name }}
+                </div>
+                <img
+                  :src="getCompanyLogo(companyGroup[0].company_name)"
+                  :alt="companyGroup[0].company_name + ' logo'"
+                  class="company-logo-img"
+                  @mouseenter="showCompanyName = companyGroup[0].company_name"
+                  @mouseleave="showCompanyName = null"
+                />
+              </div>
             </div>
 
             <div class="company-experiences">
@@ -66,6 +79,7 @@ import { onMounted, ref, computed } from "vue";
 import expData from "@/data/experience/data.json";
 
 let experienceDetails = ref([]);
+let showCompanyName = ref(null);
 
 const groupedExperiences = computed(() => {
   const sorted = [...experienceDetails.value].sort((a, b) => {
@@ -143,8 +157,21 @@ onMounted(() => {
   }
 
   .company-logo {
-    @apply absolute left-0 z-10;
-    margin-top: 2px;
+    @apply absolute left-0 z-10 mt-0.5;
+
+    .company-name {
+      @apply absolute bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium left-1/2 mb-2 opacity-0 whitespace-nowrap pointer-events-none;
+      transform: translateX(-50%) translateY(-100%) scale(0.8);
+      visibility: hidden;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+      &.show-company-name {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-100%) scale(1);
+      }
+    }
 
     &-img {
       @apply w-12 h-12 object-cover rounded-full bg-white;

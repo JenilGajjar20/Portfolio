@@ -8,7 +8,7 @@
 
     <!-- <HLine /> -->
 
-    <Experience />
+    <Projects />
 
     <HLine />
 
@@ -16,7 +16,7 @@
 
     <HLine />
 
-    <Projects />
+    <Experience />
 
     <HLine />
 

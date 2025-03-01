@@ -1,20 +1,6 @@
 <template>
   <div class="hero-section">
     <div class="hero-section--content">
-      <div class="profile-card">
-        <img src="/images/jenil.jpg" alt="profile-image" />
-        <p class="profile-card--text">
-          Developer &sdot; Open-Source Contributor &sdot; Cybersecurity
-          Enthusiast
-        </p>
-        <ButtonDefault
-          text="Resume"
-          icon
-          class="button--outline mt-2 flex items-center justify-center w-full mx-auto"
-          @click="openResume"
-        />
-      </div>
-
       <div class="hero-text">
         <h1
           class="text-4xl xl:text-5xl 2xl:text-7xl font-extrabold leading-tight text-white"
@@ -36,6 +22,19 @@
           <a href="#contact" class="get-in-touch-btn"> Get in Touch </a>
           <RouterLink to="/blogs" class="blogs"> Blogs </RouterLink>
         </div>
+      </div>
+      <div class="profile-card">
+        <img src="/images/jenil.jpg" alt="profile-image" />
+        <p class="profile-card--text">
+          Developer &sdot; Open-Source Contributor &sdot; Cybersecurity
+          Enthusiast
+        </p>
+        <ButtonDefault
+          text="Resume"
+          icon
+          class="button--outline mt-2 flex items-center justify-center w-full mx-auto"
+          @click="openResume"
+        />
       </div>
     </div>
   </div>
