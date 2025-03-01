@@ -10,11 +10,11 @@
           v-for="certificate in certificates"
           :key="certificate.id"
         >
-          <div class="md:flex md:items-start md:gap-5">
+          <div class="image flex flex-col gap-5">
             <img
               :src="`/images/certi/${certificate.image}.png`"
               :alt="certificate.title"
-              class="rounded md:w-64"
+              class="rounded h-56 lg:h-80"
             />
             <div class="">
               <div class="flex flex-col">
@@ -25,11 +25,11 @@
                   {{ certificate.platform.toUpperCase() }}
                 </span>
               </div>
-              <ul class="hidden lg:block mb-3">
+              <ul class="block mb-3">
                 <li
                   v-for="desc in certificate.description"
                   :key="desc"
-                  class="flex items-center gap-2"
+                  class="flex gap-2"
                 >
                   <IconsMdiCheck class="text-green-500 text-lg" />
                   {{ desc }}
@@ -52,15 +52,6 @@
               </div>
             </div>
           </div>
-          <ul class="lg:hidden">
-            <li
-              v-for="desc in certificate.description"
-              :key="desc"
-              class="list-disc ml-4"
-            >
-              {{ desc }}
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -82,9 +73,23 @@ onMounted(() => {
 
 <style lang="scss">
 .certificates-data {
-  @apply pt-5 md:pt-10 space-y-5 md:space-y-8;
+  @apply grid gap-3 pt-5 md:gap-8 md:grid-cols-2 md:pt-10;
   .certificate {
-    @apply bg-gray-900 p-6 rounded-md;
+    @apply border border-gray-700 p-6 lg:p-10 rounded-md hover:bg-gray-900;
+    .image {
+      img {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover {
+        img {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+    }
     ul {
       @apply mt-4;
     }
