@@ -4,10 +4,7 @@
     "title": "LinuxAdminToolkit",
     "description": "This repository is a comprehensive collection of essential Linux commands, networking configurations, services management, monitoring tools, logging practices, and shell scripting examples.",
     "category": "linux",
-    "color_class": "text-blue-700",
-    "color": "blue",
     "link": "https://jenilgajjar20.github.io/LinuxAdminToolkit/",
-    "t_color": "text-red-500",
     "modalTitle": "Guide for Linux administrators",
     "projects": [
       {
@@ -41,7 +38,6 @@
     "title": "PyCyberSecurity",
     "description": "This repository contains a collection of python scripts and projects related to various cybersecurity tasks.",
     "tech": "python",
-    "color_class": "text-blue-500",
     "link": "https://github.com/JenilGajjar20/PyCyberSecurity",
     "modalTitle": "List of Projects",
     "projects": [
@@ -76,7 +72,6 @@
     "title": "InternetBanking",
     "description": "This project provides users with a secure and user-friendly platform to manage their bank accounts online.",
     "tech": "javascript",
-    "color_class": "text-yellow-500",
     "link": "https://github.com/JenilGajjar20/internet-banking"
   },
   {
@@ -84,7 +79,6 @@
     "title": "StickWithIt",
     "description": "StickWithIt is an online food ordering website created using PHP. You can view and purchase various items as well as remove items from the cart.",
     "tech": "php",
-    "color_class": "text-purple-700",
     "link": "https://github.com/JenilGajjar20/PHP-StickWithIt"
   },
   {
@@ -92,7 +86,6 @@
     "title": "music-app",
     "description": "A simple music web application created using Vue.js with Tailwind CSS. You can play and pause the song and go to the next and previous song or click on the song to play.",
     "tech": "vue",
-    "color_class": "text-green-500",
     "link": "https://github.com/JenilGajjar20/music-app"
   },
   {
@@ -100,7 +93,6 @@
     "title": "crud-app",
     "description": "A simple crud app using Node.js and Express.js.",
     "tech": "node",
-    "color_class": "text-green-700",
     "link": "https://github.com/JenilGajjar20/crud-app",
     "show": "false"
   },
@@ -109,7 +101,6 @@
     "title": "iNoteBook",
     "description": "You can add your note with title, description and tag (optional). You can also edit the note, delete the note whenever you need.",
     "tech": "react",
-    "color_class": "text-blue-700",
     "link": "https://github.com/JenilGajjar20/iNoteBook"
   },
   {
@@ -117,7 +108,6 @@
     "title": "WaveInstruments",
     "description": "WaveInstruments is a cutting-edge platform designed for a company specializing in precision instrumentation solutions. The website provides an intuitive and responsive interface that showcases the company’s innovative products, helping industries achieve unparalleled data precision and streamlined processes.",
     "tech": "nuxt",
-    "color_class": "text-green-500",
     "link": "https://wave-instruments.vercel.app/"
   }
 ]

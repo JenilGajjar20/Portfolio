@@ -6,7 +6,18 @@
       </div>
       <div class="card--data">
         <div class="card--top">
-          <p class="card--top_badge" :class="item?.color_class">
+          <p
+            class="card--top_badge"
+            :class="{
+              'text-blue-700': item?.category === 'linux',
+              'text-purple-700': item?.tech === 'php',
+              'text-blue-500': item?.tech === 'python',
+              'text-blue-600': item?.tech === 'react',
+              'text-yellow-500': item?.tech === 'javascript',
+              'text-green-500': item?.tech === 'vue' || item?.tech === 'nuxt',
+              'text-green-800': item?.tech === 'node',
+            }"
+          >
             <span>{{ item?.category ? item.category : item.tech }}</span>
           </p>
           <div class="card--top_icon">
