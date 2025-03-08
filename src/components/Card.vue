@@ -1,19 +1,12 @@
 <template>
-  <div class="cards">
+  <div v-if="!item?.show" class="cards">
     <div class="cards-content">
+      <div v-if="item?.image" class="card--image">
+        <img :src="`/images/projects/${item?.image}.png`" :alt="item.title" />
+      </div>
       <div class="card--data">
         <div class="card--top">
-          <p
-            class="card--top_badge"
-            :class="{
-              'text-blue-700': item?.category === 'linux',
-              'text-purple-700': item?.tech === 'php',
-              'text-blue-500': item?.tech === 'python',
-              'text-yellow-500': item?.tech === 'javascript',
-              'text-green-500': item?.tech === 'vue',
-              'text-green-800': item?.tech === 'node',
-            }"
-          >
+          <p class="card--top_badge" :class="item?.color_class">
             <span>{{ item?.category ? item.category : item.tech }}</span>
           </p>
           <div class="card--top_icon">
@@ -60,14 +53,14 @@ const emit = defineEmits(["openModal"]);
   }
   .card {
     &--image {
-      @apply p-5;
+      @apply border-4 border-gray-900 rounded-tr rounded-tl p-5;
       img {
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        @apply h-64 mx-auto aspect-square object-cover rounded w-full;
+        @apply h-40 mx-auto aspect-square object-cover rounded w-full;
       }
     }
     &--data {
-      @apply bg-gray-900 rounded p-4;
+      @apply bg-gray-900 rounded-br rounded-bl p-4;
     }
     &--top {
       @apply flex items-center justify-between gap-3;
