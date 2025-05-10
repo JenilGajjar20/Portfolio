@@ -216,7 +216,7 @@ onMounted(() => {
     }
 
     &-mid {
-      @apply text-sm text-gray-300 space-y-2;
+      @apply text-sm text-gray-300 space-y-2 md:text-base;
 
       li {
         @apply relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-gray-500;

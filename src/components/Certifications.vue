@@ -18,7 +18,7 @@
             />
             <div class="">
               <div class="flex flex-col">
-                <h4 class="font-bold text-xl md:text-2xl">
+                <h4 class="font-bold text-xl whitespace-normal md:text-2xl">
                   {{ certificate.title }}
                 </h4>
                 <span class="text-base text-blue-500 font-medium">
@@ -32,7 +32,7 @@
                   class="flex gap-2"
                 >
                   <IconsMdiCheck class="text-green-500 text-lg" />
-                  {{ desc }}
+                  <p class="whitespace-normal">{{ desc }}</p>
                 </li>
               </ul>
               <div class="flex items-center gap-2">
@@ -73,9 +73,9 @@ onMounted(() => {
 
 <style lang="scss">
 .certificates-data {
-  @apply grid gap-3 pt-5 md:gap-8 md:grid-cols-2 md:pt-10;
+  @apply overflow-auto whitespace-nowrap pt-5 md:gap-8 md:grid-cols-2 md:pt-10;
   .certificate {
-    @apply border border-gray-700 p-6 lg:p-10 rounded-md hover:bg-gray-900;
+    @apply border border-gray-700 inline-block w-full mr-6 mb-5 p-6 md:w-2/5 xl:w-1/2 lg:p-10 rounded-md hover:bg-gray-900;
     .image {
       img {
         -webkit-transform: scale(1);
