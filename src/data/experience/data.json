@@ -1,21 +1,37 @@
 [
   {
     "id": "exp_1",
-    "role": "IoT Intern",
+    "role": "Jr. IoT Engineer",
     "company_name": "Rejig Digital",
     "description": [
-      "Developing IoT applications using Angular, Nest.js, and Node.js for interactive and scalable solutions",
-      "Managing Postgresql databases for real-time data handling.",
-      "Using Git for version control and team coordination."
+      "Designing and developing RESTful APIs using Nest.js to ensure scalability and performance for IoT applications.",
+      "Managing and optimizing MySQL databases, including schema design and query performance tuning for large IoT datasets.",
+      "Writing Python scripts for automated data insertion and preprocessing, streamlining integration of sensor data into backend systems.",
+      "Leading the integration of Angular-based dashboards with backend services, ensuring responsive design and smooth data flow.",
+      "Utilizing Git for source code management, implementing branching strategies and resolving complex merge conflicts in collaborative projects."
     ],
-    "start_date": "Aug 2024",
+    "start_date": "Aug 2025",
     "end_date": "",
     "location": "Ahmedabad",
-    "show": false,
+    "show": true,
     "current": true
   },
   {
     "id": "exp_2",
+    "role": "IoT Intern",
+    "company_name": "Rejig Digital",
+    "description": [
+      "Developed IoT applications using Angular, Nest.js, and Node.js for interactive and scalable solutions",
+      "Managed Postgresql databases for real-time data handling.",
+      "Utilized Git for version control and team coordination."
+    ],
+    "start_date": "Aug 2024",
+    "end_date": "Aug 2025",
+    "location": "Ahmedabad",
+    "show": true
+  },
+  {
+    "id": "exp_3",
     "role": "Frontend Developer",
     "company_name": "7Span Internet Private Limited",
     "description": [
@@ -31,7 +47,7 @@
     "show": true
   },
   {
-    "id": "exp_3",
+    "id": "exp_4",
     "role": "Frontend Intern",
     "company_name": "7Span Internet Private Limited",
     "description": [
