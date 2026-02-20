@@ -38,10 +38,18 @@
               <p>Nuxt.js</p>
             </div>
             <div class="common-class">
+              <IconsAngular class="icon" />
+              <p>Angular</p>
+            </div>
+            <div class="common-class">
+              <IconsNest class="icon" />
+              <p>Nest</p>
+            </div>
+            <div class="common-class">
               <IconsPython class="icon" />
               <p>Python</p>
             </div>
-            <div class="common-class">
+            <!-- <div class="common-class">
               <IconsKaliLinux class="icon" />
               <p>Kali Linux</p>
             </div>
@@ -52,7 +60,7 @@
             <div class="common-class">
               <IconsWireShark class="icon" />
               <p>Wireshark</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -68,9 +76,11 @@ import IconsJS from "@/components/icons/JS.vue";
 import IconsVue from "@/components/icons/Vue.vue";
 import IconsNuxt from "@/components/icons/Nuxt.vue";
 import IconsPython from "@/components/icons/Python.vue";
-import IconsKaliLinux from "@/components/icons/KaliLinux.vue";
-import IconsBurpSuite from "@/components/icons/BurpSuite.vue";
-import IconsWireShark from "@/components/icons/Wireshark.vue";
+import IconsAngular from "@/components/icons/Angular.vue";
+import IconsNest from "@/components/icons/Nest.vue";
+// import IconsKaliLinux from "@/components/icons/KaliLinux.vue";
+// import IconsBurpSuite from "@/components/icons/BurpSuite.vue";
+// import IconsWireShark from "@/components/icons/Wireshark.vue";
 import IconsPHP from "@/components/icons/Php.vue";
 </script>
 
