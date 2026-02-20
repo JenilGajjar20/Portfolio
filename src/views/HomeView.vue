@@ -20,6 +20,10 @@
 
     <HLine />
 
+    <Publication />
+
+    <HLine />
+
     <Certifications />
 
     <HLine />
@@ -36,4 +40,5 @@ import Projects from "@/components/Projects.vue";
 import Experience from "@/components/Experience.vue";
 import Certifications from "@/components/Certifications.vue";
 import Contact from "@/components/Contact.vue";
+import Publication from "../components/Publication.vue";
 </script>
