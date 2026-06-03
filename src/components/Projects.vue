@@ -1,6 +1,6 @@
 <template>
-  <div class="projects">
-    <div class="projects-content">
+  <section class="projects" id="projects">
+    <div class="projects-content" v-reveal>
       <div class="content-header">
         <h2>Projects</h2>
         <a href="https://github.com/JenilGajjar20/" target="_blank">
@@ -23,7 +23,7 @@
       :project="selectedProject"
       @close="handleCloseModal"
     />
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -56,5 +56,9 @@ const handleCloseModal = () => {
 <style lang="scss">
 .projects {
   @apply relative;
+
+  &-content {
+    position: relative;
+  }
 }
 </style>

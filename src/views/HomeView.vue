@@ -1,32 +1,20 @@
 <template>
-  <main class="container">
+  <main class="container home-interface">
     <Hero />
-
-    <HLine />
 
     <!-- <Education /> -->
 
-    <!-- <HLine /> -->
-
-    <Projects />
-
-    <HLine />
-
-    <Skills />
-
-    <HLine />
+    <div class="interface-panel-grid">
+      <Projects />
+      <Skills />
+    </div>
 
     <Experience />
 
-    <HLine />
-
-    <Publication />
-
-    <HLine />
-
-    <Certifications />
-
-    <HLine />
+    <div class="interface-panel-grid interface-panel-grid--secondary">
+      <Publication />
+      <Certifications />
+    </div>
 
     <Contact />
   </main>

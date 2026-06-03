@@ -1,6 +1,6 @@
 <template>
-  <div class="publications">
-    <div class="publication-content">
+  <section class="publications" id="publications">
+    <div class="publication-content" v-reveal>
       <div class="content-header">
         <h2>Publications</h2>
       </div>
@@ -9,6 +9,7 @@
           v-for="pubData in pubDetails"
           :key="pubData.id"
           class="publication-card"
+          v-reveal
         >
           <div class="publication-card__header">
             <div class="journal-info">
@@ -35,7 +36,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -55,50 +56,88 @@ onMounted(() => {
 <style lang="scss">
 .publication-content {
   &__data {
-    @apply pt-8 grid grid-cols-1 gap-6;
+    @apply grid grid-cols-1 gap-6;
 
     .publication-card {
-      @apply bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-400 hover:shadow-2xl flex flex-col gap-4;
+      @apply p-6 transition-all duration-300 flex flex-col gap-4;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1.15rem;
+      background:
+        linear-gradient(135deg, rgba(96, 247, 255, 0.085), rgba(255, 255, 255, 0.03)),
+        var(--bg-panel);
+      box-shadow: 0 18px 70px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(18px);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: linear-gradient(180deg, var(--cyan), var(--rose), var(--lime));
+      }
+
+      &:hover {
+        border-color: var(--line-strong);
+        transform: translateY(-6px);
+        box-shadow:
+          0 24px 80px rgba(0, 0, 0, 0.34),
+          0 0 34px rgba(96, 247, 255, 0.14);
+      }
 
       &__header {
         @apply flex flex-wrap justify-between items-center gap-2;
 
         .journal-info {
-          @apply flex items-center gap-2 text-gray-400 text-sm font-medium;
+          @apply flex items-center gap-2 text-sm font-medium;
+          color: var(--text-soft);
           .icon-journal {
-            @apply w-5 h-5 text-gray-500;
+            @apply w-5 h-5;
+            color: var(--cyan);
           }
         }
 
         .publish-date {
-          @apply text-gray-500 text-sm;
+          @apply text-sm;
+          color: var(--text-muted);
         }
       }
 
       &__title {
-        @apply font-bold text-lg md:text-xl leading-relaxed text-white;
+        @apply font-bold text-lg md:text-xl leading-relaxed;
+        color: var(--text-main);
       }
 
       &__tags {
         @apply flex flex-wrap gap-2;
 
         .section-tag {
-          @apply text-[10px] uppercase tracking-wider font-bold bg-gray-800 text-gray-300 px-3 py-1 rounded-full border border-gray-700;
+          @apply text-[10px] uppercase font-bold px-3 py-1 rounded-full;
+          color: var(--lime);
+          border: 1px solid rgba(183, 255, 90, 0.22);
+          background: rgba(183, 255, 90, 0.06);
         }
       }
 
       &__footer {
-        @apply mt-auto pt-4 border-t border-gray-800 flex justify-end;
+        @apply mt-auto pt-4 flex justify-end;
+        border-top: 1px solid var(--line);
 
         .read-more-btn {
-          @apply flex items-center gap-2 text-sm font-bold text-white hover:text-gray-300 transition-colors duration-200;
+          @apply flex items-center gap-2 text-sm font-bold transition-colors duration-200;
+          color: var(--text-main);
 
           .icon-arrow {
             @apply w-4 h-4 transition-transform duration-200;
           }
 
-          &:hover .icon-arrow {
-            @apply transform -translate-y-0.5 translate-x-0.5;
+          &:hover {
+            color: var(--cyan);
+
+            .icon-arrow {
+              @apply transform -translate-y-0.5 translate-x-0.5;
+            }
           }
         }
       }

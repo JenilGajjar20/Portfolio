@@ -1,18 +1,19 @@
 <template>
-  <h4 class="mb-4 text-xl font-bold md:mb-8 md:text-5xl">All Articles</h4>
-  <div class="blogs-articles">
+  <section v-reveal>
+    <h4 class="blogs-section-title mb-4 md:mb-8">All Articles</h4>
+  </section>
+  <section class="blogs-articles">
     <div
       v-for="article in articles"
       :key="article.id"
-      class="bg-gray-900 rounded overflow-hidden lg:flex lg:items-center lg:gap-6"
+      class="article-card"
+      v-reveal
     >
       <div class="blogs-articles__img">
         <img :src="`/images/${article.image}`" :alt="article.title" />
       </div>
       <div class="blogs-articles__data">
-        <div
-          class="flex items-center gap-4 text-gray-600 text-sm md:text-base pb-4"
-        >
+        <div class="blog-meta flex items-center gap-4 text-sm md:text-base pb-4">
           <p>{{ article.platform }}</p>
           <span>|</span>
           <p>{{ article.date_published }}</p>
@@ -21,21 +22,20 @@
           <a
             :href="article.link"
             target="_blank"
-            class="text-2xl font-oswald md:text-4xl hover:text-bright_yellow"
           >
             {{ article.title }}
           </a>
-          <p class="mt-4 text-gray-500 xl:mt-6 xl:text-lg">
+          <p class="mt-4 xl:mt-6 xl:text-lg">
             {{ article.desc.substring(0, 250) + "..." }}
           </p>
         </div>
-        <div class="mt-4 flex items-center gap-2 text-gray-600">
+        <div class="read-time mt-4 flex items-center gap-2">
           <IconsMdiRead />
           <p>{{ article.read_time }} min read</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

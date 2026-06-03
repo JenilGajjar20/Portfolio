@@ -1,8 +1,8 @@
 <template>
-  <div class="experience">
-    <div class="experience-content">
+  <section class="experience" id="experience">
+    <div class="experience-content" v-reveal>
       <div class="content-header">
-        <h2 class="text-4xl font-bold mb-6">Experience</h2>
+        <h2>Experience</h2>
       </div>
       <div class="experience-cards">
         <div class="experience-cards__content">
@@ -33,13 +33,13 @@
 
             <div class="company-experiences">
               <template v-for="exp in companyGroup" :key="exp.id">
-                <div class="card" v-if="exp.show">
+                <article class="card" v-if="exp.show" v-reveal>
                   <div class="card-top">
                     <div>
                       <h4 class="role-title">
                         {{ exp.role }}
                         <div class="verification-icon" v-if="exp.current">
-                          ✓
+                          &#10003;
                         </div>
                       </h4>
                       <p class="company-subtitle">
@@ -51,8 +51,8 @@
                         <span class="duration">{{
                           calculateDuration(exp.start_date, exp.end_date)
                         }}</span>
-                        • {{ exp.location }}
-                        <span>• Full-Time</span>
+                        &bull; {{ exp.location }}
+                        <span>&bull; Full-Time</span>
                       </p>
                     </div>
                   </div>
@@ -64,14 +64,14 @@
                       {{ desc }}
                     </li>
                   </ul>
-                </div>
+                </article>
               </template>
             </div>
           </template>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -146,13 +146,15 @@ onMounted(() => {
 
 <style lang="scss">
 .experience-cards {
-  @apply pt-4 lg:pt-10;
+  @apply pt-2;
 
   &__content {
     @apply relative pl-16;
 
     &:before {
-      @apply content-[''] absolute bg-gray-600 h-full w-0.5 rounded left-6 top-6 bottom-0;
+      @apply content-[''] absolute h-full w-0.5 rounded left-6 top-6 bottom-0;
+      background: linear-gradient(180deg, var(--cyan), rgba(167, 139, 250, 0.5), var(--rose));
+      box-shadow: 0 0 24px rgba(96, 247, 255, 0.28);
     }
   }
 
@@ -160,11 +162,13 @@ onMounted(() => {
     @apply absolute left-0 z-10 mt-0.5;
 
     .company-name {
-      @apply absolute bg-gray-800 text-white rounded-md px-3 py-2 text-sm font-medium left-1/2 mb-2 opacity-0 whitespace-nowrap pointer-events-none;
+      @apply absolute text-white rounded-md px-3 py-2 text-sm font-medium left-1/2 mb-2 opacity-0 whitespace-nowrap pointer-events-none;
+      background: var(--bg-panel-strong);
+      border: 1px solid var(--line);
       transform: translateX(-50%) translateY(-100%) scale(0.8);
       visibility: hidden;
       transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow-glow);
 
       &.show-company-name {
         opacity: 1;
@@ -175,24 +179,46 @@ onMounted(() => {
 
     &-img {
       @apply w-12 h-12 object-cover rounded-full bg-white;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.75);
+      box-shadow:
+        0 0 0 5px rgba(96, 247, 255, 0.1),
+        0 0 30px rgba(96, 247, 255, 0.24);
     }
   }
 
   .company-experiences {
     @apply mb-10 relative;
-
-    &:before {
-      @apply content-[''] absolute bg-gray-600 h-full w-0.5 rounded top-6 bottom-0 -left-11 hidden;
-    }
+    display: grid;
+    gap: 1rem;
   }
 
   .card {
     @apply mb-6 relative;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02)),
+      rgba(8, 13, 27, 0.68);
+    backdrop-filter: blur(18px);
+    transition:
+      transform 220ms ease,
+      border-color 220ms ease,
+      box-shadow 220ms ease;
+
+    &:hover {
+      border-color: var(--line-strong);
+      transform: translateX(6px);
+      box-shadow: var(--shadow-glow);
+    }
 
     &:before {
-      @apply content-[''] absolute bg-white w-2.5 h-2.5 rounded-full -left-11 top-2.5;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+      @apply content-[''] absolute w-2.5 h-2.5 rounded-full -left-11 top-7;
+      background: var(--cyan);
+      box-shadow:
+        0 0 0 5px rgba(96, 247, 255, 0.12),
+        0 0 22px rgba(96, 247, 255, 0.52);
     }
 
     &-top {
@@ -200,26 +226,74 @@ onMounted(() => {
 
       .role-title {
         @apply font-bold text-xl flex items-center gap-2;
+        color: var(--text-main);
 
         .verification-icon {
-          @apply text-white bg-green-700 rounded-full w-5 h-5 flex items-center justify-center text-sm;
+          @apply rounded-full w-5 h-5 flex items-center justify-center text-sm;
+          color: #061017;
+          background: var(--lime);
+          box-shadow: 0 0 18px rgba(183, 255, 90, 0.35);
         }
       }
 
       .company-subtitle {
-        @apply text-sm text-gray-400 mt-1 font-medium;
+        @apply text-sm mt-1 font-medium;
+        color: var(--text-muted);
+        font-family: "Courier New", Courier, monospace;
 
         .duration {
-          @apply text-gray-500;
+          color: var(--text-soft);
         }
       }
     }
 
     &-mid {
-      @apply text-sm text-gray-300 space-y-2 md:text-base;
+      @apply text-sm space-y-2 md:text-base;
+      color: var(--text-soft);
+      border-top: 1px solid var(--line);
+      padding-top: 1rem;
 
       li {
-        @apply relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-gray-500;
+        @apply relative pl-5 before:content-[''] before:absolute before:left-0;
+
+        &::before {
+          top: 0.7em;
+          width: 0.38rem;
+          height: 0.38rem;
+          border-radius: 999px;
+          background: var(--rose);
+          box-shadow: 0 0 12px rgba(255, 101, 179, 0.45);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-cards {
+    &__content {
+      padding-left: 2.75rem;
+
+      &::before {
+        left: 1rem;
+      }
+    }
+
+    .company-logo {
+      left: -0.5rem;
+    }
+
+    .card::before {
+      left: -2rem;
+    }
+
+    .card {
+      width: 100%;
+      margin-left: 0;
+      border-radius: 1rem;
+
+      &::before {
+        left: -2rem;
       }
     }
   }
