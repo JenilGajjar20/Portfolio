@@ -1,6 +1,8 @@
 <template>
-  <h2 class="mb-4 text-xl font-bold md:mb-8 md:text-5xl">Latest Blog</h2>
-  <div class="blogs-latest">
+  <section v-reveal>
+    <h2 class="blogs-section-title mb-4 md:mb-8">Latest Blog</h2>
+  </section>
+  <article class="blogs-latest" v-reveal>
     <div class="blogs-latest__img">
       <img
         :src="`/images/${latest.image}`"
@@ -8,9 +10,7 @@
       />
     </div>
     <div class="blogs-content__data">
-      <div
-        class="flex items-center gap-4 text-gray-600 text-sm md:text-base pb-4"
-      >
+      <div class="blog-meta flex items-center gap-4 text-sm md:text-base pb-4">
         <p>{{ latest.platform }}</p>
         <span>|</span>
         <p>{{ latest.date_published }}</p>
@@ -19,20 +19,19 @@
         <a
           :href="latest.link"
           target="_blank"
-          class="text-2xl font-oswald md:text-4xl hover:text-bright_yellow"
         >
           {{ latest.title }}
         </a>
-        <p class="mt-4 text-gray-500 xl:mt-6 xl:text-lg">
+        <p class="mt-4 xl:mt-6 xl:text-lg">
           {{ latest.desc.substring(0, 300) + "..." }}
         </p>
       </div>
-      <div class="mt-4 flex items-center gap-2 text-gray-600">
+      <div class="read-time mt-4 flex items-center gap-2">
         <IconsMdiRead />
         <p>{{ latest.read_time }} min read</p>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>

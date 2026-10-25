@@ -7,6 +7,12 @@
           Jenil Gajjar
         </router-link>
       </div>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <RouterLink to="/#projects">Work</RouterLink>
+        <RouterLink to="/#about">About</RouterLink>
+        <RouterLink to="/blogs">Journal</RouterLink>
+        <RouterLink to="/#contact">Contact <span aria-hidden="true">&#8599;</span></RouterLink>
+      </nav>
       <div class="navbar-content__items">
         <NavItems />
       </div>

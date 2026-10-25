@@ -1,6 +1,6 @@
 <template>
-  <div class="projects">
-    <div class="projects-content">
+  <section class="projects" id="projects">
+    <div class="projects-content" v-reveal>
       <div class="content-header">
         <h2>Projects</h2>
         <a href="https://github.com/JenilGajjar20/" target="_blank">
@@ -23,19 +23,20 @@
       :project="selectedProject"
       @close="handleCloseModal"
     />
-  </div>
+  </section>
 </template>
 
 <script setup>
 import Card from "@/components/Card.vue";
 import projectData from "@/data/projects/data.json";
 
-import { onMounted, ref } from "vue";
+import { onMounted, onBeforeUnmount, ref } from "vue";
 import Modal from "@/components/Modal.vue";
 
 let projects = ref([]);
 const isModalOpen = ref(false);
 const selectedProject = ref(null);
+let previousOverflow = "";
 
 onMounted(() => {
   projects.value = projectData;
@@ -43,18 +44,26 @@ onMounted(() => {
 
 const handleOpenModal = (project) => {
   selectedProject.value = project;
+  previousOverflow = document.body.style.overflow;
   isModalOpen.value = true;
   document.body.style.overflow = "hidden";
 };
 
 const handleCloseModal = () => {
   isModalOpen.value = false;
-  document.body.style.overflow = "auto";
+  document.body.style.overflow = previousOverflow;
 };
+onBeforeUnmount(() => {
+  if (isModalOpen.value) document.body.style.overflow = previousOverflow;
+});
 </script>
 
 <style lang="scss">
 .projects {
   @apply relative;
+
+  &-content {
+    position: relative;
+  }
 }
 </style>

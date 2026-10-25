@@ -1,13 +1,29 @@
 .navbar {
-  @apply relative transition-all duration-200 container;
+  @apply sticky top-0 transition-all duration-200 container;
+  z-index: 40;
+  padding-top: 1rem;
   &-wrapper {
-    @apply border-b-2 border-gray-500 text-white py-5;
+    @apply text-white py-4;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(5, 9, 19, 0.72);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(22px);
     &--content {
       @apply flex items-center justify-between;
+      padding-inline: clamp(1rem, 3vw, 1.5rem);
     }
   }
   &-link {
-    @apply font-greatVibes border-none lg:text-2xl hover:text-yellow-500;
+    @apply border-none font-bold;
+    color: var(--text-main);
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    letter-spacing: 0;
+
+    &:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 20px rgba(96, 247, 255, 0.45);
+    }
   }
   &-content__logo {
     img {
@@ -22,6 +38,31 @@
   }
   &-items {
     @apply flex items-center justify-center gap-3;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
+
+      &:hover {
+        border-color: var(--line-strong);
+        transform: translateY(-2px) rotate(4deg);
+        box-shadow: var(--shadow-glow);
+      }
+
+      svg {
+        color: var(--text-soft);
+      }
+
+      &:hover svg {
+        color: var(--cyan);
+      }
+    }
   }
   &-menu-icon {
     @apply text-2xl;
@@ -29,12 +70,17 @@
 }
 
 .list-items {
-  @apply fixed z-10 top-0 right-0 h-screen w-4/5 bg-white shadow-lg md:hidden;
+  @apply fixed z-10 top-0 right-0 h-screen w-4/5 shadow-lg md:hidden;
+  background: var(--bg-panel-strong);
+  border-left: 1px solid var(--line);
+  backdrop-filter: blur(20px);
   .close-icon {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    @apply absolute -left-14 top-5 rounded-full flex items-center justify-center w-8 h-8 bg-white text-grey;
+    @apply absolute -left-14 top-5 rounded-full flex items-center justify-center w-8 h-8 text-white;
+    background: var(--bg-panel-strong);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-glow);
   }
   ul {
-    @apply flex flex-col items-center py-10 space-y-4 font-bold text-xl text-grey;
+    @apply flex flex-col items-center py-10 space-y-4 font-bold text-xl text-white;
   }
 }

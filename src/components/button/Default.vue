@@ -27,11 +27,42 @@ import IconsMdiLoading from "@/components/icons/MdiLoading.vue";
 
 <style lang="scss" scoped>
 .button {
-  @apply px-5 py-2 duration-200 font-bold flex items-center gap-2 md:px-6;
+  @apply px-5 py-3 duration-200 font-bold flex items-center gap-2 md:px-6;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 999px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    transform: translateX(-120%);
+    transition: transform 420ms ease;
+  }
+
+  &:hover::before {
+    transform: translateX(120%);
+  }
+
+  p,
+  svg {
+    position: relative;
+  }
+
   &--outline {
-    @apply border-2 rounded text-yellow-500 border-yellow-500;
+    color: var(--cyan);
+    border: 1px solid var(--line-strong);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
     &:hover {
-      @apply text-bright_yellow border-bright_yellow;
+      color: #031018;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--cyan), var(--lime));
+      box-shadow: 0 0 32px rgba(96, 247, 255, 0.26);
+      transform: translateY(-2px);
     }
   }
 }

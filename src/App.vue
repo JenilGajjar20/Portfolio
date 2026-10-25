@@ -4,13 +4,24 @@ import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
-  <header class="navbar">
-    <Navbar />
-  </header>
+  <div class="portfolio-shell">
+    <div class="site-backdrop" aria-hidden="true">
+      <div class="backdrop-grid"></div>
+      <div class="backdrop-particles"></div>
+      <div class="backdrop-beam backdrop-beam--one"></div>
+      <div class="backdrop-beam backdrop-beam--two"></div>
+    </div>
 
-  <router-view />
+    <header class="navbar">
+      <Navbar />
+    </header>
 
-  <Footer />
+    <router-view />
+
+    <Footer />
+  </div>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@import "@/assets/scss/redesign.scss";
+</style>

@@ -1,13 +1,31 @@
 <template>
-  <div class="hero-section">
+  <section class="hero-section" id="hero">
+    <ThreeHeroScene />
     <div class="hero-section--content">
       <div class="hero-text">
-        <h1
-          class="text-4xl xl:text-5xl 2xl:text-7xl font-extrabold leading-tight text-white"
-        >
-          Hi, I’m <span class="text-yellow-500">Jenil Gajjar</span>
+        <p class="hero-eyebrow">IoT Engineer / Full-stack Developer</p>
+        <h1>
+          <span>Hi, I'm</span>
+          <strong>Jenil Gajjar</strong>
         </h1>
-        <p class="text-gray-400 mt-4 lg:text-lg xl:text-xl">
+        <p class="hero-summary">Developer &sdot; Open-Source Contributor &sdot; Cybersecurity Enthusiast</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="get-in-touch-btn">Explore my work <span aria-hidden="true">&#8595;</span></a>
+          <RouterLink to="/blogs" class="blogs">Read the journal <span aria-hidden="true">&#8599;</span></RouterLink>
+        </div>
+        <a class="hero-scroll" href="#about">Meet the developer <span aria-hidden="true">&#8595;</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="about-section" id="about">
+    <div class="about-portrait">
+      <img src="/images/jenil.jpg" alt="Jenil Gajjar" />
+      <p>Ahmedabad, India</p>
+    </div>
+    <div class="about-content">
+      <p class="section-kicker">Behind the code</p>
+      <h2>Curiosity drives<br />everything I build.</h2>
+      <p class="hero-copy">
           As a passionate tech enthusiast, I thrive on continuous learning and
           enthusiastically embrace new technologies. My adaptable mindset and
           self-driven approach enable me to excel in dynamic work environments.
@@ -18,32 +36,33 @@
           the ever-evolving tech landscape, with a specific focus on enhancing
           security and protecting digital assets.
         </p>
-        <div class="cta-buttons">
-          <a href="#contact" class="get-in-touch-btn"> Get in Touch </a>
-          <RouterLink to="/blogs" class="blogs"> Blogs </RouterLink>
+        <div class="hero-tags" aria-label="Focus areas">
+          <span>IoT APIs</span>
+          <span>Cybersecurity</span>
+          <span>Open Source</span>
+          <span>Vue / Nest</span>
         </div>
-      </div>
-      <div class="profile-card">
-        <img src="/images/jenil.jpg" alt="profile-image" />
-        <p class="profile-card--text">
-          Developer &sdot; Open-Source Contributor &sdot; Cybersecurity
-          Enthusiast
-        </p>
-        <ButtonDefault
-          text="Resume"
-          icon
-          class="button--outline mt-2 flex items-center justify-center w-full mx-auto"
-          @click="openResume"
-        />
-      </div>
+        <div class="about-actions">
+          <a href="#contact">Get in Touch <span aria-hidden="true">&#8599;</span></a>
+          <ButtonDefault
+            text="Resume"
+            icon
+            class="button--outline mt-2 flex items-center justify-center w-full mx-auto"
+            @click="openResume"
+          />
+        </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
 import ButtonDefault from "@/components/button/Default.vue";
-import { ref } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import { RouterLink } from "vue-router";
+
+const ThreeHeroScene = defineAsyncComponent(() =>
+  import("@/components/ThreeHeroScene.vue")
+);
 
 const url = ref("");
 
@@ -52,31 +71,3 @@ const openResume = () => {
   window.open(url.value, "_blank");
 };
 </script>
-
-<style lang="scss">
-.hero-section {
-  @apply pt-10 md:pt-24;
-  &--content {
-    @apply flex flex-col-reverse lg:flex-row items-center gap-8 max-w-7xl mx-auto;
-  }
-  .profile-card {
-    @apply shadow-lg bg-gray-800 p-6 rounded-lg w-auto;
-    img {
-      @apply rounded-md mx-auto;
-    }
-    &--text {
-      @apply text-yellow-500 lg:text-lg pt-4 font-bold;
-    }
-  }
-}
-
-.cta-buttons {
-  @apply flex gap-4 mt-6;
-  .get-in-touch-btn {
-    @apply font-semibold px-5 py-2 bg-yellow-500 text-gray-800 rounded-md hover:bg-yellow-400 md:px-6;
-  }
-  .blogs {
-    @apply font-semibold px-5 py-2 border-2 border-yellow-500 text-yellow-500 rounded-md hover:border-bright_yellow hover:text-bright_yellow md:px-6;
-  }
-}
-</style>
