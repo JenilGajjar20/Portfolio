@@ -109,5 +109,12 @@
     "description": "WaveInstruments is a cutting-edge platform designed for a company specializing in precision instrumentation solutions. The website provides an intuitive and responsive interface that showcases the company’s innovative products, helping industries achieve unparalleled data precision and streamlined processes.",
     "tech": "nuxt",
     "link": "https://wave-instruments.vercel.app/"
+  },
+  {
+    "id": "project_9",
+    "title": "env-detector",
+    "description": "A professional-grade CLI tool for development environments. It helps manage `.env` files, scan for security leaks, and ensure environment consistency across different systems.",
+    "tech": "node",
+    "link": "https://www.npmjs.com/package/env-detector"
   }
 ]
