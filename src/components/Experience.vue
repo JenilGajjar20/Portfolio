@@ -12,26 +12,16 @@
           >
             <div class="company-logo">
               <div class="relative">
-                <div
-                  class="company-name"
-                  :class="{
-                    'show-company-name':
-                      showCompanyName === companyGroup[0].company_name,
-                  }"
-                >
-                  {{ companyGroup[0].company_name }}
-                </div>
                 <img
                   :src="getCompanyLogo(companyGroup[0].company_name)"
                   :alt="companyGroup[0].company_name + ' logo'"
                   class="company-logo-img"
-                  @mouseenter="showCompanyName = companyGroup[0].company_name"
-                  @mouseleave="showCompanyName = null"
                 />
               </div>
             </div>
 
             <div class="company-experiences">
+              <h3 class="experience-company-heading">{{ companyGroup[0].company_name }}</h3>
               <template v-for="exp in companyGroup" :key="exp.id">
                 <article class="card" v-if="exp.show" v-reveal>
                   <div class="card-top">
@@ -79,7 +69,6 @@ import { onMounted, ref, computed } from "vue";
 import expData from "@/data/experience/data.json";
 
 let experienceDetails = ref([]);
-let showCompanyName = ref(null);
 
 const groupedExperiences = computed(() => {
   const sorted = [...experienceDetails.value].sort((a, b) => {
@@ -160,22 +149,6 @@ onMounted(() => {
 
   .company-logo {
     @apply absolute left-0 z-10 mt-0.5;
-
-    .company-name {
-      @apply absolute text-white rounded-md px-3 py-2 text-sm font-medium left-1/2 mb-2 opacity-0 whitespace-nowrap pointer-events-none;
-      background: var(--bg-panel-strong);
-      border: 1px solid var(--line);
-      transform: translateX(-50%) translateY(-100%) scale(0.8);
-      visibility: hidden;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-glow);
-
-      &.show-company-name {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) translateY(-100%) scale(1);
-      }
-    }
 
     &-img {
       @apply w-12 h-12 object-cover rounded-full bg-white;

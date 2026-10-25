@@ -16,6 +16,9 @@ let nebula;
 let core;
 let grid;
 let resizeObserver;
+let visibilityObserver;
+let inView = true;
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const pointer = {
   x: 0,
@@ -26,9 +29,9 @@ const createStarField = () => {
   const count = 950;
   const positions = new Float32Array(count * 3);
   const colors = new Float32Array(count * 3);
-  const colorA = new THREE.Color("#60f7ff");
-  const colorB = new THREE.Color("#ff65b3");
-  const colorC = new THREE.Color("#b7ff5a");
+  const colorA = new THREE.Color("#c5f66b");
+  const colorB = new THREE.Color("#e8eddf");
+  const colorC = new THREE.Color("#638357");
 
   for (let i = 0; i < count; i += 1) {
     const radius = 2.6 + Math.random() * 5.2;
@@ -68,7 +71,7 @@ const createCore = () => {
   const knot = new THREE.Mesh(
     new THREE.TorusKnotGeometry(0.78, 0.18, 160, 18),
     new THREE.MeshBasicMaterial({
-      color: "#60f7ff",
+      color: "#c5f66b",
       wireframe: true,
       transparent: true,
       opacity: 0.34,
@@ -80,12 +83,13 @@ const createCore = () => {
   const shell = new THREE.LineSegments(
     shellEdges,
     new THREE.LineBasicMaterial({
-      color: "#ff65b3",
+      color: "#e8eddf",
       transparent: true,
       opacity: 0.28,
     })
   );
 
+  shellGeometry.dispose();
   const ring = new THREE.Mesh(
     new THREE.TorusGeometry(1.95, 0.006, 8, 160),
     new THREE.MeshBasicMaterial({
@@ -118,14 +122,18 @@ const resize = () => {
   if (!width || !height) return;
 
   camera.aspect = width / height;
+  core.position.x = width < 600 ? 0.7 : 1.7;
+  core.position.y = width < 600 ? -1.1 : 0.15;
+  core.scale.setScalar(width < 600 ? 0.4 : 1);
   camera.updateProjectionMatrix();
   renderer.setSize(width, height, false);
 };
 
 const animate = () => {
   animationFrame = window.requestAnimationFrame(animate);
+  if (!inView || document.hidden) return;
 
-  const time = performance.now() * 0.001;
+  const time = reducedMotion.matches ? 0 : performance.now() * 0.001;
 
   if (nebula) {
     nebula.rotation.y = time * 0.035 + pointer.x * 0.05;
@@ -156,12 +164,16 @@ onMounted(() => {
   camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
   camera.position.set(0, 0.2, 6);
 
-  renderer = new THREE.WebGLRenderer({
+  try {
+    renderer = new THREE.WebGLRenderer({
     alpha: true,
     antialias: true,
     powerPreference: "high-performance",
     preserveDrawingBuffer: true,
   });
+  } catch {
+    return;
+  }
   renderer.setClearColor(0x000000, 0);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6));
 
@@ -175,6 +187,8 @@ onMounted(() => {
 
   resizeObserver = new ResizeObserver(resize);
   resizeObserver.observe(sceneEl.value);
+  visibilityObserver = new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; });
+  visibilityObserver.observe(sceneEl.value);
   window.addEventListener("pointermove", handlePointerMove, { passive: true });
 
   resize();
@@ -185,6 +199,7 @@ onBeforeUnmount(() => {
   window.cancelAnimationFrame(animationFrame);
   window.removeEventListener("pointermove", handlePointerMove);
   resizeObserver?.disconnect();
+  visibilityObserver?.disconnect();
 
   scene?.traverse((object) => {
     object.geometry?.dispose?.();

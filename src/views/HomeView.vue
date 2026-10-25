@@ -4,17 +4,12 @@
 
     <!-- <Education /> -->
 
-    <div class="interface-panel-grid">
-      <Projects />
-      <Skills />
-    </div>
-
+    <Projects />
+    <Skills />
     <Experience />
 
-    <div class="interface-panel-grid interface-panel-grid--secondary">
-      <Publication />
-      <Certifications />
-    </div>
+    <Publication />
+    <Certifications />
 
     <Contact />
   </main>
